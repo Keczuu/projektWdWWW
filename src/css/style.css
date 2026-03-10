@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap");
 
-
 body {
     font-family: "Unbounded", sans-serif;
     background-color: #89023E;
@@ -10,6 +9,7 @@ body {
     text-align: center;
     min-height: 100vh;
     margin: 0;
+    padding-bottom: 70px;
 }
 
 .header {
@@ -41,7 +41,18 @@ body {
 
 .header-center {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    padding-left: 70px;
+    font-size: 1.6rem;
+}
+
+.header-center a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-center a:hover {
+    color: #fff !important;
 }
 
 .name h1 {
@@ -54,8 +65,23 @@ body {
     height: 60px;
     border-radius: 50%;
     border: 4px solid #ea638c;
+    object-fit: cover;
 }
 
+.backdrop {
+    background-color: #1B2021;
+    margin: 0 150px;
+    padding: 50px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
 .footer {
     text-align: center;
@@ -65,4 +91,40 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.styled-form input, .styled-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+}
+
+.styled-form button {
+    background-color: #ea638c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.styled-form button:hover {
+    background-color: #d14971;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     </div>
     <div class="header-center">
         <a href="/index.html" style="color: #ea638c;">Biblioteka</a> |
-        <a href="/dodajGre.html" style="color: #ea638c;">Dodaj gre</a> |
+        <a href="/dodajGre.html" style="color: #fff;">Dodaj gre</a> |
         <a href="/oNas.html" style="color: #ea638c;">O nas</a>
     </div>
     <div class="header-right">
@@ -29,29 +29,57 @@
         </div>
     </div>
 </div>
-<div class="menu">
-    <div class="left">
-        <div class="add-game">
-            <h2>Dodaj gre</h2>
-            <form action="/dodajGre" method="post">
-                <input type="text" name="title" placeholder="Tytuł gry" required />
-                <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />
-                <input type="checkbox" name="daniel" id="daniel" value="daniel" required />
-                <label for="daniel"> Czy w grze jest Daniel</label><br>
-                <input type="number" name="releaseYear" placeholder="Rok wydania" required />
-                <button type="submit">Dodaj gre</button>
-            </form>
+
+<div class="backdrop">
+    <div class="menu">
+        <div class="left">
+            <div class="add-game">
+                <h2>Dodaj gre</h2>
+                <form action="/dodajGre" method="post" class="styled-form">
+                    <label>
+                        <input type="text" name="title" placeholder="Tytuł gry" required />
+                    </label>
+                    <label>
+                        <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />
+                    </label>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="daniel" id="daniel" value="daniel" required />
+                        <label for="daniel"> Czy w grze jest Daniel</label>
+                    </div>
+
+                    <label>
+                        <input type="number" name="releaseYear" placeholder="Rok wydania" required />
+                    </label>
+
+                    <label>
+                        <input list="ograniczeniaWiekowe" name="wiek" placeholder="Ograniczenia wiekowe" required>
+                    </label>
+                    <datalist id="ograniczeniaWiekowe">
+                        <option value="Kazdy wiek"></option>
+                        <option value="3+"></option>
+                        <option value="7+"></option>
+                        <option value="12+"></option>
+                        <option value="16+"></option>
+                        <option value="18+"></option>
+                    </datalist>
+
+                    <button type="submit">Dodaj gre</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="dodajObrazek">
+                <h2>Dodaj obrazek</h2>
+                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
+                    <input type="file" name="image" required />
+                    <button type="submit">Dodaj</button>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
-    <div class="right">
-        <div class="dodajObrazek">
-            <h2>Dodaj obrazek</h2>
-            <form action="/dodajObrazek" method="post" enctype="multipart/form-data">
-                <input type="file" name="image" required />
-                <button type="submit">Dodaj</button>
-            </form>
-    </div>
-<div class="footer">
+</div> <div class="footer">
     <p>Daniel Games ©</p>
 </div>
 </body>
