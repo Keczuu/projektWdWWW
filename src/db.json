@@ -1,14 +1,17 @@
 {
   "$schema": "./node_modules/json-server/schema.json",
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+
+  "games": [
+    { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "E10+",
+      "year_of_release": 2016, "daniel?":  false, "png": ""
+    },
+    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "PG13",
+      "year_of_release": 2050, "daniel?":  true, "png": ""
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "reviews": [
+    { "id": "1", "game_id": "1", "rating": 5 , "text": "a review of the game_id=1"},
+    { "id": "2", "game_id": "1", "rating": 1 , "text": "another review of the game_id=1"}
+  ]
 }
