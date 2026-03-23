@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Daniel Games</title>
+    <title>DanielGames</title>
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="icon" href="src/img/logo.png" />
 </head>
 <body>
 <div class="header">
     <div class="header-left">
-        <div class="logo">
-            <img src="src/img/logo.png" alt="logo" />
+        <div class="logo-container">
+            <img src="src/img/logo.png" alt="logo" class="logo-normal" />
+            <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover" />
         </div>
     </div>
     <div class="header-center">
@@ -30,12 +31,51 @@
     </div>
 </div>
 <div class="backdrop">
+    <div class="sort-bar">
+        <div class="sort-item name-col">Nazwa (↑↓)</div>
+        <div class="sort-right">
+            <div class="sort-item">Trudność (↑↓)</div>
+            <div class="sort-item">Ocena (↑↓)</div>
+            <div class="sort-item">PG (↑↓)</div>
+            <div class="sort-item">Daniel ☑</div>
+            <div class="sort-item">Rok wydania (↑↓)</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="game-card">
+            <h3 class="game-title">Honkai: Star Rail</h3>
+            <div class="game-content">
+                <img src=src/img/f1bcb05d3ece8fe13242fad5bfd1219a6410309d.png alt="Honkai" class="game-cover" />
+                <div class="game-stats">
+                    <div class="stat-item stars">★★★★★</div>
+                    <div class="stat-item circle rating-pink">4.7</div>
+                    <div class="stat-item circle pg-orange">12</div>
+                    <div class="stat-item checkbox">☑</div>
+                    <div class="stat-item year">2023</div>
+                </div>
+            </div>
+            <button class="review-btn">Dodaj opinię</button>
+        </div>
+
+        <div class="game-card">
+            <h3 class="game-title">Fallout 76</h3>
+            <div class="game-content">
+                <img src=src/img/e2f92af371166a83a50b6a795341ea7d208e59a2.jpg alt="Fallout" class="game-cover" />
+                <div class="game-stats">
+                    <div class="stat-item stars">★★★☆☆</div>
+                    <div class="stat-item circle rating-red">3.8</div>
+                    <div class="stat-item circle pg-red">18</div>
+                    <div class="stat-item checkbox">☑</div>
+                    <div class="stat-item year">2018</div>
+                </div>
+            </div>
+            <button class="review-btn">Dodaj opinię</button>
+        </div>
+    </div>
 
 </div>
 
-<div class="content">
 
-</div>
 
 <div class="footer">
     <p>DanielGames ©</p>
