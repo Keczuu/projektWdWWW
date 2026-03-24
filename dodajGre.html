@@ -7,6 +7,7 @@
     <title>DanielGames</title>
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="icon" href="src/img/logo.png" />
+    <script src="src/java/dodajGre.js"></script>
 </head>
 <body>
 <div class="header">
@@ -31,11 +32,11 @@
 </div>
 
 <div class="backdrop">
-    <div class="menu">
+    <div class="menu" id="game_adding_menu">
         <div class="left">
             <div class="add-game">
                 <h2>Dodaj gre</h2>
-                <form action="/dodajGre" method="post" class="styled-form">
+                <form action="dodajGre.html" method="post" class="styled-form">
                     <label>
                         <input type="text" name="title" placeholder="Tytuł gry" required />
                     </label>
@@ -44,7 +45,7 @@
                     </label>
 
                     <div class="checkbox-group">
-                        <input type="checkbox" name="daniel" id="daniel" value="daniel" required />
+                        <input type="checkbox" name="daniel" id="daniel" value="daniel"/>
                         <label for="daniel"> Czy w grze jest Daniel</label>
                     </div>
 
@@ -64,7 +65,8 @@
                         <option value="18+"></option>
                     </datalist>
 
-                    <button type="submit">Dodaj gre</button>
+                    <button type="submit" onclick="addGame()">Dodaj gre</button>
+<!--                    <button type="submit">Dodaj gre</button>-->
                 </form>
             </div>
         </div>
