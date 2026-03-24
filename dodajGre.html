@@ -11,10 +11,11 @@
 <body>
 <div class="header">
     <div class="header-left">
-        <div class="logo">
-            <img src="src/img/logo.png" alt="logo" />
+        <div class="logo-container">
+            <img src="src/img/logo.png" alt="logo" class="logo-normal" />
+            <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover" />
         </div>
-    </div>
+    </div >
     <div class="header-center">
         <a href="/index.html" style="color: #ea638c;">Biblioteka</a> |
         <a href="/dodajGre.html" class="active-link">Dodaj gre</a> |
@@ -31,6 +32,7 @@
 </div>
 
 <div class="backdrop">
+    <!--
     <div class="menu">
         <div class="left">
             <div class="add-game">
@@ -79,6 +81,33 @@
             </div>
         </div>
     </div>
+    -->
+
+    <div class="parent">
+        <div class="div1">Nazwa</div>
+        <div class="div2">Trudnosc</div>
+        <div class="div5">
+            <label>
+                <input type="text" name="title" placeholder="Wprowadź nazwę..." required />
+            </label>
+        </div>
+        <div class="div6">Gwiazdki</div>
+        <div class="div7">Okladka</div>
+        <div class="div8">
+            <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
+                <input type="file" name="image" required />
+
+            </form></div>
+        <div class="div9">PG</div>
+        <div class="div10">3 7 12 16 18</div>
+        <div class="div11">Czy jest Daniel?</div>
+        <div class="div12"><input type="checkbox" name="daniel" id="daniel" value="daniel" required /></div>
+        <div class="div13">Rok wydania</div>
+        <div class="div14">Wybierz rok</div>
+        <div class="div15"><button type=submit class="buttonDark">Anuluj</button></div>
+        <div class="div16"><button type="submit" class="buttonBright">Zapisz</button></div>
+    </div>
+
 </div> <div class="footer">
     <p>DanielGames ©</p>
 </div>

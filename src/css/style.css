@@ -277,3 +277,192 @@ body {
 .review-btn:hover {
     background-color: #ea638c;
 }
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.div1 {
+     background-color: #000000;
+     border-radius: 12px;
+     padding: 20px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+     align-items: center;
+     justify-items: center;
+ }
+
+ .div2 {
+     background-color: #000000;
+     border-radius: 12px;
+     padding: 20px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+     align-items: center;
+     justify-items: center;
+ }
+
+.div5 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div5 input {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+
+.div6 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div8 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 4;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div9 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div10 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div11 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div12 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div13 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div14 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-items: center;
+}
+
+.div15 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+.div16 {
+    grid-column-start: 4;
+    grid-row-start: 5;
+}
+
+.buttonBright {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    background-color: #ea638c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonDark {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    background-color: #89023E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
