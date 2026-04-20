@@ -12,6 +12,12 @@ body {
     padding-bottom: 70px;
 }
 
+.inny-ekran {
+    margin: 0 auto;
+    max-width: 1800px;
+    width: 100%;
+}
+
 .header {
     background-color: #14161D;
     color: #fff;
@@ -60,9 +66,38 @@ body {
 
 .backdrop {
     background-color: #1B2021;
-    margin: 0 150px;
-    padding: 20px 20px 50px;
+    margin: 0 auto;
+    max-width: 1800px;
+    padding: 35px 35px 88px;
     min-height: calc(100vh - 200px);
+    font-size: 1.75em;
+}
+
+@media screen and (min-width: 1600px) {
+    .inny-ekran, .backdrop {
+        max-width: 2000px;
+    }
+    .header-center {
+        font-size: 1.7rem;
+        padding-left: 80px;
+    }
+    .game-cover {
+        width: 280px;
+        height: 140px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .inny-ekran, .backdrop {
+        max-width: 2200px;
+    }
+    .game-cover {
+        width: 320px;
+        height: 160px;
+    }
+    .parent {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 .menu {
@@ -87,14 +122,14 @@ body {
 .styled-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 26px;
     width: 100%;
-    max-width: 300px;
+    max-width: 525px;
     margin: 0 auto;
 }
 
 .styled-form input, .styled-form button {
-    padding: 10px;
+    padding: 17.5px;
     border-radius: 5px;
     border: none;
     font-family: inherit;
@@ -129,19 +164,19 @@ body {
 .sort-bar {
     background-color: #000000;
     border-radius: 12px;
-    padding: 15px 30px;
+    padding: 26px 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 24.5px;
+    margin-bottom: 7px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .sort-right, .game-stats {
     display: grid;
-    grid-template-columns: 140px 110px 90px 100px 150px;
-    gap: 15px;
+    grid-template-columns: 245px 192.5px 157.5px 175px 262.5px;
+    gap: 26px;
     align-items: center;
     justify-items: center;
 }
@@ -195,16 +230,16 @@ body {
 .game-card {
     background-color: #000000;
     border-radius: 12px;
-    padding: 15px 30px 40px 30px;
-    margin-bottom: 20px;
+    padding: 26px 53px 70px 53px;
+    margin-bottom: 7px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .game-title {
     text-align: left;
-    margin: 0 0 10px 0;
-    font-size: 18px;
+    margin: 0 0 18px 0;
+    font-size: 31.5px;
     font-weight: 400;
 }
 
@@ -215,8 +250,8 @@ body {
 }
 
 .game-cover {
-    width: 240px;
-    height: 120px;
+    width: 420px;
+    height: 210px;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -234,16 +269,16 @@ body {
 }
 
 .stars {
-    font-size: 20px;
+    font-size: 35px;
     letter-spacing: 2px;
-    width: 120px;
+    width: 210px;
 }
 
 .circle {
-    width: 60px;
-    height: 60px;
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 38.5px;
 }
 
 .rating-pink { background-color: #89023E; }
@@ -252,25 +287,25 @@ body {
 .pg-red { background-color: #A00000; }
 
 .checkbox {
-    font-size: 30px;
+    font-size: 52.5px;
 }
 
 .year {
-    font-size: 24px;
+    font-size: 42px;
 }
 
 .review-btn {
     position: absolute;
-    bottom: 15px;
-    right: 30px;
+    bottom: 26px;
+    right: 53px;
     background-color: #89023E;
     color: white;
     border: none;
-    padding: 6px 16px;
+    padding: 10.5px 28px;
     border-radius: 20px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 21px;
     transition: 0.3s;
 }
 
@@ -288,7 +323,7 @@ body {
 .div1 {
      background-color: #000000;
      border-radius: 12px;
-     padding: 20px;
+     padding: 35px;
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
      align-items: center;
      justify-items: center;
@@ -297,7 +332,7 @@ body {
  .div2 {
      background-color: #000000;
      border-radius: 12px;
-     padding: 20px;
+     padding: 35px;
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
      align-items: center;
      justify-items: center;
@@ -309,7 +344,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -328,7 +363,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -341,7 +376,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -355,7 +390,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -368,7 +403,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 20px;
+    padding: 35px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -381,7 +416,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -393,7 +428,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -405,7 +440,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -417,7 +452,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -429,7 +464,7 @@ body {
 
     background-color: #000000;
     border-radius: 12px;
-    padding: 30px;
+    padding: 52.5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-items: center;
@@ -446,7 +481,7 @@ body {
 }
 
 .buttonBright {
-    padding: 10px;
+    padding: 17.5px;
     border-radius: 5px;
     border: none;
     font-family: inherit;
@@ -454,10 +489,11 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    font-size: 1.1em;
 }
 
 .buttonDark {
-    padding: 10px;
+    padding: 17.5px;
     border-radius: 5px;
     border: none;
     font-family: inherit;
@@ -465,6 +501,7 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    font-size: 1.1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -484,6 +521,7 @@ body {
         width: 90%;
         padding: 20px 20px 50px;
         min-height: calc(100vh - 200px);
+        font-size: 1em;
     }
 
     .menu {
@@ -494,10 +532,14 @@ body {
     .sort-bar {
         flex-direction: column;
         gap: 15px;
+        padding: 15px 30px;
+        font-size: 14px;
+        margin-bottom: 4px;
     }
 
     .sort-right, .game-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .game-content {
@@ -505,6 +547,69 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .game-card {
+        padding: 15px 30px 40px 30px;
+        margin-bottom: 4px;
+    }
+
+    .game-title {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    .game-cover {
+        width: 240px;
+        height: 120px;
+    }
+
+    .stars {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .checkbox {
+        font-size: 30px;
+    }
+
+    .year {
+        font-size: 24px;
+    }
+
+    .review-btn {
+        bottom: 15px;
+        right: 30px;
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .styled-form {
+        gap: 15px;
+        max-width: 300px;
+    }
+
+    .styled-form input, .styled-form button {
+        padding: 10px;
+    }
+
+    .buttonBright, .buttonDark {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .div1, .div2, .div9 {
+        padding: 20px;
+    }
+
+    .div5, .div6, .div7, .div8, .div10, .div11, .div12, .div13, .div14 {
+        padding: 30px;
     }
 
 }
