@@ -9,6 +9,7 @@
     <link rel="icon" href="src/img/logo.png" />
 </head>
 <body>
+<div class="inny-ekran">
 <div class="header">
     <div class="header-left">
         <div class="logo-container">
@@ -17,9 +18,9 @@
         </div>
     </div>
     <div class="header-center">
-        <a href="/index.html" class="active-link">Biblioteka</a> |
-        <a href="/dodajGre.html" style="color: #ea638c;">Dodaj gre</a> |
-        <a href="/oNas.html" style="color: #ea638c;">O nas</a>
+        <a href="index.html" class="active-link">Biblioteka</a> |
+        <a href="dodajGre.html" style="color: #ea638c;">Dodaj gre</a> |
+        <a href="oNas.html" style="color: #ea638c;">O nas</a>
     </div>
     <div class="header-right">
         <div class="name">
@@ -74,8 +75,16 @@
     </div>
 
 </div>
+</div>
 
-
+<script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('przycisk'); // generalnie to trzeba by bylo dodac jakies metadane do tego zeby rozroznic jaki przycisk zostal wcisniety wiec proponuje ladowac po prostu tytul gry i dodawac go do przycisku
+        });
+    });
+</script>
 
 <div class="footer">
     <p>DanielGames ©</p>
