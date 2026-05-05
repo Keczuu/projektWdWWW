@@ -7,6 +7,7 @@
     <title>DanielGames</title>
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="icon" href="src/img/logo.png" />
+    <script src="src/java/seeGames.js"></script>
 </head>
 <body>
 <div class="inny-ekran">
@@ -42,6 +43,9 @@
             <div class="sort-item">Rok wydania (↑↓)</div>
         </div>
     </div>
+<script>
+    games = loadGames()
+</script>
     <div class="content">
         <div class="game-card">
             <h3 class="game-title">Honkai: Star Rail</h3>
@@ -58,23 +62,8 @@
             <button class="review-btn">Dodaj opinię</button>
         </div>
 
-        <div class="game-card">
-            <h3 class="game-title">Fallout 76</h3>
-            <div class="game-content">
-                <img src=src/img/e2f92af371166a83a50b6a795341ea7d208e59a2.jpg alt="Fallout" class="game-cover" />
-                <div class="game-stats">
-                    <div class="stat-item stars">★★★☆☆</div>
-                    <div class="stat-item circle rating-red">3.8</div>
-                    <div class="stat-item circle pg-red">18</div>
-                    <div class="stat-item checkbox">☑</div>
-                    <div class="stat-item year">2018</div>
-                </div>
-            </div>
-            <button class="review-btn">Dodaj opinię</button>
-        </div>
-    </div>
 
-</div>
+    </div>
 </div>
 
 <script>

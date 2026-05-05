@@ -5,7 +5,7 @@
     { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "3",
       "year_of_release": 2016, "daniel":  false, "picture": ""
     },
-    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "PG13",
+    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "18",
       "year_of_release": 2050, "daniel":  true, "picture": ""
     }
   ],
