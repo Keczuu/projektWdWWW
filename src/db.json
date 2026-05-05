@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+
+  "games": [
+    { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "3",
+      "year_of_release": 2016, "daniel":  false, "picture": ""
+    },
+    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "PG13",
+      "year_of_release": 2050, "daniel":  true, "picture": ""
+    }
+  ],
+
+  "reviews": [
+    { "id": "1", "game_id": "1", "rating": 5 , "text": "a review of the game_id=1"},
+    { "id": "2", "game_id": "1", "rating": 1 , "text": "another review of the game_id=1"}
+  ]
+}
