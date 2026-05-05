@@ -77,7 +77,14 @@
 </div>
 </div>
 
-
+<script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('przycisk'); // generalnie to trzeba by bylo dodac jakies metadane do tego zeby rozroznic jaki przycisk zostal wcisniety wiec proponuje ladowac po prostu tytul gry i dodawac go do przycisku
+        });
+    });
+</script>
 
 <div class="footer">
     <p>DanielGames ©</p>
