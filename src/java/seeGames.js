@@ -1,20 +1,79 @@
-async function loadGame(id) {
-    const response = await fetch('http://localhost:3000/games/' + id.toString())
-    const games = await response.json()
-    console.log(games)
-    return games
+async function loadGames() {
+    const response = await fetch('http://localhost:3000/games');
+    const games = await response.json();
+
+    return games;
 }
 
-function seeGames(){
-    let id = 1
-    while (id < 20) {
-        let game = loadGame(id)
-        document.getElementById("game_adding_menu").innerHTML = "Gra dodana:-P";
-        id += 1
-    }
+async function seeGames() {
+    const games = await loadGames();
+
+    const content = document.querySelector('.content');
+
+    content.innerHTML = '';
+
+    games.forEach(game => {
+
+        let stars = '★'.repeat(game.difficulty);
+
+        let rating = game.rating ?? '-';
+
+        let daniel = game.daniel ? '☑' : '☐';
+
+        // obrazek jeszcze trzeba ogarnac
+        let picture = game.picture;
+
+        content.innerHTML += `
+        <div class="game-card">
+            <h3 class="game-title">${game.title}</h3>
+
+            <div class="game-content">
+
+                <img src="${picture}" alt="${game.title}" class="game-cover" />
+
+                <div class="game-stats">
+                    <div class="stat-item stars">${stars}</div>
+
+                    <div class="stat-item circle rating-pink">
+                        ${rating}
+                    </div>
+
+                    <div class="stat-item circle pg-orange">
+                        ${game.age_rating}
+                    </div>
+
+                    <div class="stat-item checkbox">
+                        ${daniel}
+                    </div>
+
+                    <div class="stat-item year">
+                        ${game.year_of_release}
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="review-btn" data-id="${game.id}">
+                Dodaj opinię
+            </button>
+        </div>
+        `;
+    });
+
+    const buttons = document.querySelectorAll('.review-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+
+            const gameId = this.dataset.id;
+
+            console.log('Kliknięto grę o id:', gameId);
+
+        });
+    });
 }
 
-
+seeGames();
 
 
 
