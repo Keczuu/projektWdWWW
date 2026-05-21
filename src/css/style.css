@@ -350,7 +350,8 @@ body {
     justify-items: center;
 }
 
-.div5 input {
+.div5 input, .div6 input {
+    text-align: center;
     border: none;
     outline: none;
     background: none;

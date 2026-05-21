@@ -1,3 +1,6 @@
+<!--generalnie to nie wiem co tu sie dzialo ale przyciski sie generowaly poza menu??? - k -->
+<!--do zrobienia formularz w jsie-->
+<!--usunalem jeszcze te stare menu ale jakby ktos chcial https://pastebin.com/raw/8u99V3Qn - k -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -10,6 +13,7 @@
     <script src="src/java/dodajGre.js"></script>
 </head>
 <body>
+<div class="inny-ekran">
 <div class="header">
     <div class="header-left">
         <div class="logo-container">
@@ -33,57 +37,56 @@
 </div>
 
 <div class="backdrop">
-    <!--
-    <div class="menu">
-        <div class="left">
-            <div class="add-game">
-                <h2>Dodaj gre</h2>
-                <form action="dodajGre.html" method="post" class="styled-form">
-                    <label>
-                        <input type="text" name="title" placeholder="Tytuł gry" required />
-                    </label>
-                    <label>
-                        <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />
-                    </label>
+<!--    <div class="menu">-->
+<!--        <div class="left">-->
+<!--            <div class="add-game">-->
+<!--                <h2>Dodaj gre</h2>-->
+<!--                <form action="dodajGre.html" method="post" class="styled-form">-->
+<!--                    <label>-->
+<!--                        <input type="text" name="title" placeholder="Tytuł gry" required />-->
+<!--                    </label>-->
+<!--                    <label>-->
+<!--                        <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />-->
+<!--                    </label>-->
 
-                    <div class="checkbox-group">
-                        <input type="checkbox" name="daniel" id="daniel" value="daniel"/>
-                        <label for="daniel"> Czy w grze jest Daniel</label>
-                    </div>
+<!--                    <div class="checkbox-group">-->
+<!--                        <input type="checkbox" name="daniel" id="daniel" value="daniel"/>-->
+<!--                        <label for="daniel"> Czy w grze jest Daniel</label>-->
+<!--                    </div>-->
 
-                    <label>
-                        <input type="number" name="releaseYear" placeholder="Rok wydania" required />
-                    </label>
+<!--                    <label>-->
+<!--                        <input type="number" name="releaseYear" placeholder="Rok wydania" required />-->
+<!--                    </label>-->
 
-                    <label>
-                        <input list="ograniczeniaWiekowe" name="wiek" placeholder="Ograniczenia wiekowe" required>
-                    </label>
-                    <datalist id="ograniczeniaWiekowe">
-                        <option value="Kazdy wiek"></option>
-                        <option value="3+"></option>
-                        <option value="7+"></option>
-                        <option value="12+"></option>
-                        <option value="16+"></option>
-                        <option value="18+"></option>
-                    </datalist>
+<!--                    <label>-->
+<!--                        <input list="ograniczeniaWiekowe" name="wiek" placeholder="Ograniczenia wiekowe" required>-->
+<!--                    </label>-->
+<!--                    <datalist id="ograniczeniaWiekowe">-->
+<!--                        <option value="Kazdy wiek"></option>-->
+<!--                        <option value="3+"></option>-->
+<!--                        <option value="7+"></option>-->
+<!--                        <option value="12+"></option>-->
+<!--                        <option value="16+"></option>-->
+<!--                        <option value="18+"></option>-->
+<!--                    </datalist>-->
 
-                    <button type="submit" onclick="addGame()">Dodaj gre</button>
+<!--                    <button type="submit" onclick="addGame()">Dodaj gre</button>-->
 <!--                    <button type="submit">Dodaj gre</button>-->
-                </form>
-            </div>
-        </div>
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <div class="right">
-            <div class="dodajObrazek">
-                <h2>Dodaj obrazek</h2>
-                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
-                    <input type="file" name="image" required />
-                    <button type="submit">Dodaj</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    -->
+<!--        <div class="right">-->
+<!--            <div class="dodajObrazek">-->
+<!--                <h2>Dodaj obrazek</h2>-->
+<!--                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">-->
+<!--                    <input type="file" name="image" required />-->
+<!--                    <button type="submit">Dodaj</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
 
     <div class="parent">
         <div class="div1">Nazwa</div>
@@ -93,7 +96,7 @@
                 <input type="text" name="title" placeholder="Wprowadź nazwę..." required />
             </label>
         </div>
-        <div class="div6">Gwiazdki</div>
+        <div class="div6"><input type="text" name="trudnosc" placeholder="x/5" required/></div>
         <div class="div7">Okladka</div>
         <div class="div8">
             <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
@@ -101,16 +104,30 @@
 
             </form></div>
         <div class="div9">PG</div>
-        <div class="div10">3 7 12 16 18</div>
-        <div class="div11">Czy jest Daniel?</div>
-        <div class="div12"><input type="checkbox" name="daniel" id="daniel" value="daniel" required /></div>
-        <div class="div13">Rok wydania</div>
-        <div class="div14">Wybierz rok</div>
-        <div class="div15"><button type=submit class="buttonDark">Anuluj</button></div>
+        <div class="div10">
+            <input list="ograniczeniaWiekowe" id="wiek" name="wiek" placeholder="Wybierz..." required>
+            <datalist id="ograniczeniaWiekowe">
+                <option value="Każdy wiek"></option>
+                <option value="3+"></option>
+                <option value="7+"></option>
+                <option value="12+"></option>
+                <option value="16+"></option>
+                <option value="18+"></option>
+            </datalist>
+        </div>
+        <div class="div11"><label for="daniel">Czy jest Daniel?</label></div>
+        <div class="div12"><input type="checkbox" name="daniel" id="daniel" value="daniel" />
+        </div>
+        <div class="div13"><label for="releaseYear">Rok wydania</label></div>
+        <div class="div14"><input type="number" id="releaseYear" name="releaseYear" placeholder="Rok wydania" required/>
+        </div>
+        <div class="div15"><button type="reset" class="buttonDark">Anuluj</button>
+        </div>
         <div class="div16"><button type="submit" class="buttonBright">Zapisz</button></div>
-    </div>
-
-</div> <div class="footer">
+</div>
+</div>
+</div>
+ <div class="footer">
     <p>DanielGames ©</p>
 </div>
 </body>
