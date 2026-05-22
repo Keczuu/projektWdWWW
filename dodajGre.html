@@ -8,126 +8,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DanielGames</title>
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="icon" href="src/img/logo.png" />
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
     <script src="src/java/dodajGre.js"></script>
 </head>
 <body>
 <div class="inny-ekran">
-<div class="header">
-    <div class="header-left">
-        <div class="logo-container">
-            <img src="src/img/logo.png" alt="logo" class="logo-normal" />
-            <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover" />
+    <div class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <img src="src/img/logo.png" alt="logo" class="logo-normal"/>
+                <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover"/>
+            </div>
         </div>
-    </div >
-    <div class="header-center">
-        <a href="index.html" style="color: #ea638c;">Biblioteka</a> |
-        <a href="dodajGre.html" class="active-link">Dodaj gre</a> |
-        <a href="oNas.html" style="color: #ea638c;">O nas</a>
+        <div class="header-center">
+            <a href="index.html" style="color: #ea638c;">Biblioteka</a> |
+            <a href="dodajGre.html" class="active-link">Dodaj gre</a> |
+            <a href="oNas.html" style="color: #ea638c;">O nas</a>
+        </div>
+        <div class="header-right">
+            <div class="name">
+                <h1>random</h1>
+            </div>
+            <div class="avatar">
+                <img src="src/img/avatar.jpg" alt="avatar"/>
+            </div>
+        </div>
     </div>
-    <div class="header-right">
-        <div class="name">
-            <h1>random</h1>
-        </div>
-        <div class="avatar">
-            <img src="src/img/avatar.jpg" alt="avatar" />
+
+    <div class="backdrop">
+        <!--    <div class="menu">-->
+        <!--        <div class="left">-->
+        <!--            <div class="add-game">-->
+        <!--                <h2>Dodaj gre</h2>-->
+        <!--                <form action="dodajGre.html" method="post" class="styled-form">-->
+        <!--                    <label>-->
+        <!--                        <input type="text" name="title" placeholder="Tytuł gry" required />-->
+        <!--                    </label>-->
+        <!--                    <label>-->
+        <!--                        <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />-->
+        <!--                    </label>-->
+
+        <!--                    <div class="checkbox-group">-->
+        <!--                        <input type="checkbox" name="daniel" id="daniel" value="daniel"/>-->
+        <!--                        <label for="daniel"> Czy w grze jest Daniel</label>-->
+        <!--                    </div>-->
+
+        <!--                    <label>-->
+        <!--                        <input type="number" name="releaseYear" placeholder="Rok wydania" required />-->
+        <!--                    </label>-->
+
+        <!--                    <label>-->
+        <!--                        <input list="ograniczeniaWiekowe" name="wiek" placeholder="Ograniczenia wiekowe" required>-->
+        <!--                    </label>-->
+        <!--                    <datalist id="ograniczeniaWiekowe">-->
+        <!--                        <option value="Kazdy wiek"></option>-->
+        <!--                        <option value="3+"></option>-->
+        <!--                        <option value="7+"></option>-->
+        <!--                        <option value="12+"></option>-->
+        <!--                        <option value="16+"></option>-->
+        <!--                        <option value="18+"></option>-->
+        <!--                    </datalist>-->
+
+        <!--                    <button type="submit" onclick="addGame()">Dodaj gre</button>-->
+        <!--                    <button type="submit">Dodaj gre</button>-->
+        <!--                </form>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="right">-->
+        <!--            <div class="dodajObrazek">-->
+        <!--                <h2>Dodaj obrazek</h2>-->
+        <!--                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">-->
+        <!--                    <input type="file" name="image" required />-->
+        <!--                    <button type="submit">Dodaj</button>-->
+        <!--                </form>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+
+
+        <div class="parent">
+            <div class="div1">Nazwa</div>
+            <div class="div2">Trudnosc</div>
+            <div class="div5">
+                <label>
+                    <input type="text" name="title" placeholder="Wprowadź nazwę..." required/>
+                </label>
+            </div>
+            <div class="div6"><input type="text" name="trudnosc" placeholder="x/5" required/></div>
+            <div class="div7">Okladka</div>
+            <div class="div8">
+                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
+                    <input type="file" name="image" required/>
+
+                </form>
+            </div>
+            <div class="div9">PG</div>
+            <div class="div10">
+                <input list="ograniczeniaWiekowe" id="wiek" name="wiek" placeholder="Wybierz..." required>
+                <datalist id="ograniczeniaWiekowe">
+                    <option value="Każdy wiek"></option>
+                    <option value="3+"></option>
+                    <option value="7+"></option>
+                    <option value="12+"></option>
+                    <option value="16+"></option>
+                    <option value="18+"></option>
+                </datalist>
+            </div>
+            <div class="div11"><label for="daniel">Czy jest Daniel?</label></div>
+            <div class="div12"><input type="checkbox" name="daniel" id="daniel" value="daniel"/>
+            </div>
+            <div class="div13"><label for="releaseYear">Rok wydania</label></div>
+            <div class="div14"><input type="number" id="releaseYear" name="releaseYear" placeholder="Rok wydania"
+                                      required/>
+            </div>
+            <div class="div15">
+                <button type="reset" class="buttonDark">Anuluj</button>
+            </div>
+            <div class="div16">
+                <button type="submit" class="buttonBright">Zapisz</button>
+            </div>
         </div>
     </div>
 </div>
-
-<div class="backdrop">
-<!--    <div class="menu">-->
-<!--        <div class="left">-->
-<!--            <div class="add-game">-->
-<!--                <h2>Dodaj gre</h2>-->
-<!--                <form action="dodajGre.html" method="post" class="styled-form">-->
-<!--                    <label>-->
-<!--                        <input type="text" name="title" placeholder="Tytuł gry" required />-->
-<!--                    </label>-->
-<!--                    <label>-->
-<!--                        <input type="text" name="trudnosc" placeholder="Trudnosc w gwiazdach x/5" required />-->
-<!--                    </label>-->
-
-<!--                    <div class="checkbox-group">-->
-<!--                        <input type="checkbox" name="daniel" id="daniel" value="daniel"/>-->
-<!--                        <label for="daniel"> Czy w grze jest Daniel</label>-->
-<!--                    </div>-->
-
-<!--                    <label>-->
-<!--                        <input type="number" name="releaseYear" placeholder="Rok wydania" required />-->
-<!--                    </label>-->
-
-<!--                    <label>-->
-<!--                        <input list="ograniczeniaWiekowe" name="wiek" placeholder="Ograniczenia wiekowe" required>-->
-<!--                    </label>-->
-<!--                    <datalist id="ograniczeniaWiekowe">-->
-<!--                        <option value="Kazdy wiek"></option>-->
-<!--                        <option value="3+"></option>-->
-<!--                        <option value="7+"></option>-->
-<!--                        <option value="12+"></option>-->
-<!--                        <option value="16+"></option>-->
-<!--                        <option value="18+"></option>-->
-<!--                    </datalist>-->
-
-<!--                    <button type="submit" onclick="addGame()">Dodaj gre</button>-->
-<!--                    <button type="submit">Dodaj gre</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="right">-->
-<!--            <div class="dodajObrazek">-->
-<!--                <h2>Dodaj obrazek</h2>-->
-<!--                <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">-->
-<!--                    <input type="file" name="image" required />-->
-<!--                    <button type="submit">Dodaj</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-    <div class="parent">
-        <div class="div1">Nazwa</div>
-        <div class="div2">Trudnosc</div>
-        <div class="div5">
-            <label>
-                <input type="text" name="title" placeholder="Wprowadź nazwę..." required />
-            </label>
-        </div>
-        <div class="div6"><input type="text" name="trudnosc" placeholder="x/5" required/></div>
-        <div class="div7">Okladka</div>
-        <div class="div8">
-            <form action="/dodajObrazek" method="post" enctype="multipart/form-data" class="styled-form">
-                <input type="file" name="image" required />
-
-            </form></div>
-        <div class="div9">PG</div>
-        <div class="div10">
-            <input list="ograniczeniaWiekowe" id="wiek" name="wiek" placeholder="Wybierz..." required>
-            <datalist id="ograniczeniaWiekowe">
-                <option value="Każdy wiek"></option>
-                <option value="3+"></option>
-                <option value="7+"></option>
-                <option value="12+"></option>
-                <option value="16+"></option>
-                <option value="18+"></option>
-            </datalist>
-        </div>
-        <div class="div11"><label for="daniel">Czy jest Daniel?</label></div>
-        <div class="div12"><input type="checkbox" name="daniel" id="daniel" value="daniel" />
-        </div>
-        <div class="div13"><label for="releaseYear">Rok wydania</label></div>
-        <div class="div14"><input type="number" id="releaseYear" name="releaseYear" placeholder="Rok wydania" required/>
-        </div>
-        <div class="div15"><button type="reset" class="buttonDark">Anuluj</button>
-        </div>
-        <div class="div16"><button type="submit" class="buttonBright">Zapisz</button></div>
-</div>
-</div>
-</div>
- <div class="footer">
+<div class="footer">
     <p>DanielGames ©</p>
 </div>
 </body>
