@@ -5,8 +5,20 @@
     { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "3",
       "year_of_release": 2016, "daniel":  false, "picture": ""
     },
-    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "PG13",
+    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "13",
       "year_of_release": 2050, "daniel":  true, "picture": ""
+    },
+    { "id": "3", "title": "Honkai: Star Rail", "difficulty": 5 , "rating": 4.7, "age_rating": "12",
+      "year_of_release": 2023, "daniel":  true, "picture": ""
+    },
+    { "id": "4", "title": "Fallout 76", "difficulty": 3 , "rating": 3.8, "age_rating": "18",
+      "year_of_release": 2018, "daniel":  true, "picture": ""
+    },
+    { "id": "5", "title": "Battlefield™ 1", "difficulty": 4 , "rating": 5, "age_rating": "18",
+      "year_of_release": 2016, "daniel":  true, "picture": ""
+    },
+    { "id": "6", "title": "Factorio", "difficulty": 5 , "rating": 5, "age_rating": "E",
+      "year_of_release": 2020, "daniel":  false, "picture": ""
     }
   ],
 
