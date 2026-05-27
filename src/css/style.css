@@ -505,6 +505,20 @@ body {
     font-size: 1.1em;
 }
 
+.accessibility {
+    position: absolute;
+    right: 70px;
+    top: 30px; /*to do zmiany bo u mnie wyglada git nie wiem jak gdzie indziej*/
+    background-color: #FFFB00;
+    color: black;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
