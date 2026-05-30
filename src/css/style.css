@@ -73,6 +73,47 @@ body {
     font-size: 1.75em;
 }
 
+body.dostepnosc {
+    background-color: #FF0071;
+}
+
+body.dostepnosc .header-center a:not(.active-link) {
+    color: #FF004D !important; /*generalnie to tutaj jest important bo kolor jest zapisany w htmlu i nie chce mi sie tego zmieniac wiec whtvr*/
+}
+
+body.dostepnosc .header-center a:not(.active-link):hover {
+    color: #fff !important; /*generalnie to tutaj jest important bo kolor jest zapisany w htmlu i nie chce mi sie tego zmieniac wiec whtvr*/
+}
+
+body.dostepnosc .avatar img {
+    border: 4px solid #FF004D;
+}
+
+body.dostepnosc .rating-pink { background-color: #FF0071; }
+body.dostepnosc .rating-red { background-color: #FF1A44; }
+body.dostepnosc .pg-orange { background-color: #D16200; }
+body.dostepnosc  .pg-red { background-color: #EB0000; }
+
+body.dostepnosc .review-btn {
+    background-color: #FF0071;
+}
+
+body.dostepnosc .review-btn:hover {
+    background-color: #FF004D;
+}
+
+body.dostepnosc .accessibility {
+    background-color: #FF0071;
+}
+
+body.dostepnosc .buttonBright {
+    background-color: #FF007F;
+}
+
+body.dostepnosc .buttonDark {
+    background-color: #878787;
+}
+
 @media screen and (min-width: 1600px) {
     .inny-ekran, .backdrop {
         max-width: 2000px;
