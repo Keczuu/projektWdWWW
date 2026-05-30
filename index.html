@@ -88,7 +88,24 @@
 
 <div class="footer">
     <p>DanielGames ©</p>
-    <div class="accessibility">K</div> <!-- zmienic to na guzik i napisac jakis prosty skrypt podmieniajacy css albo po prostu kolory zalezy jak lezy-->
+    <button class="accessibility">K</button>
 </div>
+<script>
+    if (localStorage.getItem('accessibility') === 'enabled') {
+        document.body.classList.add('dostepnosc');
+    }
+    for (const btn of document.querySelectorAll('.accessibility')) { // lecimy po wszysktich, bo możliwe że wstawimy np w headerze i w stopce taki przycisk
+                                                                     // po kliknięciu dodajemy/usuwamy klasę `is-dark` na body
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dostepnosc');
+
+            if (document.body.classList.contains('dostepnosc')) {
+                localStorage.setItem('accessibility', 'enabled');
+            } else {
+                localStorage.setItem('accessibility', 'disabled');
+            }
+        });
+    }
+</script>
 </body>
 </html>
