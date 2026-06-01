@@ -18,8 +18,10 @@
     <div class="header">
         <div class="header-left">
             <div class="logo-container">
-                <img src="src/img/logo.png" alt="logo" class="logo-normal"/>
-                <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover"/>
+                <a href="index.html">
+                    <img src="src/img/logo.png" alt="logo" class="logo-normal"/>
+                    <img src="src/img/logo1.png" alt="logo hover" class="logo-on-hover"/>
+                </a>
             </div>
         </div>
         <div class="header-center">
@@ -86,22 +88,6 @@
     <p>DanielGames ©</p>
     <button class="accessibility">K</button>
 </div>
-<script>
-    if (localStorage.getItem('accessibility') === 'enabled') {
-        document.body.classList.add('dostepnosc');
-    }
-    for (const btn of document.querySelectorAll('.accessibility')) { // lecimy po wszysktich, bo możliwe że wstawimy np w headerze i w stopce taki przycisk
-        // po kliknięciu dodajemy/usuwamy klasę `is-dark` na body
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('dostepnosc');
-
-            if (document.body.classList.contains('dostepnosc')) {
-                localStorage.setItem('accessibility', 'enabled');
-            } else {
-                localStorage.setItem('accessibility', 'disabled');
-            }
-        });
-    }
-</script>
+<script src="src/java/przyciskDostepu.js"></script>
 </body>
 </html>
