@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanielGames</title>
+
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
+</head>
+
+<body>
+<div class="layout">
+
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo-container" aria-label="Strona główna">
+                <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
+                <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
+            </a>
+        </div>
+
+        <nav class="header-center" aria-label="Nawigacja">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active-link">Biblioteka</a></li>
+                <li><a href="dodajGre.html">Dodaj grę</a></li>
+                <li><a href="oNas.html">O nas</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <h1 class="username">random</h1>
+            <img src="src/img/avatar.jpg" alt="Avatar użytkownika" class="avatar"/>
+        </div>
+    </header>
+
+    <section class="sort-bar" aria-label="Opcje sortowania">
+        <button class="sort-item name-col">Nazwa (↑↓)</button>
+
+        <div class="sort-right">
+            <button class="sort-item">Trudność (↑↓)</button>
+            <button class="sort-item">Ocena (↑↓)</button>
+            <button class="sort-item">PG (↑↓)</button>
+            <button class="sort-item">Daniel ☑</button>
+            <button class="sort-item">Rok wydania (↑↓)</button>
+        </div>
+    </section>
+
+    <main class="content">
+
+        <article class="game-card">
+            <h3 class="game-title">Honkai: Star Rail</h3>
+
+            <div class="game-content">
+                <img src="src/img/f1bcb05d3ece8fe13242fad5bfd1219a6410309d.png" alt="Okładka gry Honkai: Star Rail" class="game-cover"/>
+
+                <ul class="game-stats">
+                    <li class="stat-item stars">★★★★★</li>
+                    <li class="stat-item circle rating-pink">4.7</li>
+                    <li class="stat-item circle pg-orange">12</li>
+                    <li class="stat-item checkbox">☑</li>
+                    <li class="stat-item year">2023</li>
+                </ul>
+            </div>
+
+            <button class="review-btn">Dodaj opinię</button>
+        </article>
+
+        <article class="game-card">
+            <h3 class="game-title">Fallout 76</h3>
+
+            <div class="game-content">
+                <img src="src/img/e2f92af371166a83a50b6a795341ea7d208e59a2.jpg" alt="Okładka gry Fallout 76" class="game-cover"/>
+
+                <ul class="game-stats">
+                    <li class="stat-item stars">★★★☆☆</li>
+                    <li class="stat-item circle rating-red">3.8</li>
+                    <li class="stat-item circle pg-red">18</li>
+                    <li class="stat-item checkbox">☑</li>
+                    <li class="stat-item year">2018</li>
+                </ul>
+            </div>
+
+            <button class="review-btn">Dodaj opinię</button>
+        </article>
+
+    </main>
+
+</div>
+
+<footer class="footer">
+    <p>DanielGames ©</p>
+    <button class="accessibility" aria-label="Tryb dostępności">K</button>
+</footer>
+
+<script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => console.log('przycisk'));
+    });
+</script>
+
+<script>
+    if (localStorage.getItem('accessibility') === 'enabled') {
+        document.body.classList.add('dostepnosc');
+    }
+
+    document.querySelectorAll('.accessibility').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dostepnosc');
+            localStorage.setItem('accessibility',
+                document.body.classList.contains('dostepnosc') ? 'enabled' : 'disabled'
+            );
+        });
+    });
+</script>
+
+</body>
+</html>

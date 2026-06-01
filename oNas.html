@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanielGames – O nas</title>
+
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo-container" aria-label="Strona główna">
+                <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
+                <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
+            </a>
+        </div>
+
+        <nav class="header-center" aria-label="Nawigacja">
+            <ul class="nav-list">
+                <li><a href="index.html">Biblioteka</a></li>
+                <li><a href="dodajGre.html">Dodaj grę</a></li>
+                <li><a href="oNas.html" class="active-link">O nas</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <h1 class="username">random</h1>
+            <img src="src/img/avatar.jpg" alt="Avatar użytkownika" class="avatar"/>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="about">
+
+        <section class="about-hero">
+            <h2 class="about-title">Kim jesteśmy?</h2>
+            <p class="about-subtitle">
+                DanielGames to mały, ale ambitny projekt tworzony z pasji do gier, technologii i porządku w biblioteczkach.
+            </p>
+        </section>
+
+        <section class="about-content">
+
+            <article class="about-block">
+                <h3 class="about-heading">Nasza misja</h3>
+                <p>
+                    Chcemy stworzyć miejsce, w którym każdy gracz może łatwo zarządzać swoją kolekcją,
+                    oceniać tytuły, dodawać własne opinie i odkrywać nowe gry dzięki przejrzystym statystykom.
+                </p>
+            </article>
+
+            <article class="about-block">
+                <h3 class="about-heading">Dlaczego to robimy?</h3>
+                <p>
+                    Bo kochamy gry. I wierzymy, że dobra biblioteka gier powinna być tak samo satysfakcjonująca,
+                    jak przejście ulubionego tytułu. Naszym celem jest połączenie funkcjonalności z prostotą.
+                </p>
+            </article>
+
+            <article class="about-block">
+                <h3 class="about-heading">Kto za tym stoi?</h3>
+                <p>
+                    Projekt rozwijany jest przez fanów Daniela oraz społeczność, która aktywnie zgłasza pomysły i ulepszenia.
+                    Każda opinia pomaga nam tworzyć lepszą platformę.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>DanielGames ©</p>
+    <button class="accessibility" aria-label="Tryb dostępności">K</button>
+</footer>
+
+<script>
+    if (localStorage.getItem('accessibility') === 'enabled') {
+        document.body.classList.add('dostepnosc');
+    }
+
+    document.querySelectorAll('.accessibility').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dostepnosc');
+            localStorage.setItem('accessibility',
+                document.body.classList.contains('dostepnosc') ? 'enabled' : 'disabled'
+            );
+        });
+    });
+</script>
+
+</body>
+</html>

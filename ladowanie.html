@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DanielGames</title>
+
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
+</head>
+
+<body>
+<div class="stronka">
+    <div id="container"></div>
+</div>
+
+<script>
+    function loadPage(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const body = doc.querySelector('body');
+
+                if (body) {
+                    document.getElementById('container').innerHTML = body.innerHTML;
+                    attachLinkHandlers();
+                }
+            })
+    }
+
+    function attachLinkHandlers() {
+        const links = document.querySelectorAll('#container a');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && (href.includes('index.html') || href.includes('dodajGre.html') || href.includes('oNas.html'))) {
+                    e.preventDefault();
+                    loadPage(href);
+                }
+            });
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        loadPage('index.html');
+    });
+</script>
+</body>
+</html>
