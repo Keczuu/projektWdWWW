@@ -3,22 +3,22 @@
 
   "games": [
     { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "3",
-      "year_of_release": 2016, "daniel":  false, "picture": ""
+      "year_of_release": 2016, "daniel":  false, "picture": "src/img/st.png"
     },
     { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "13",
-      "year_of_release": 2050, "daniel":  true, "picture": ""
+      "year_of_release": 2050, "daniel":  true, "picture": "src/img/sv2.png"
     },
     { "id": "3", "title": "Honkai: Star Rail", "difficulty": 5 , "rating": 4.7, "age_rating": "12",
-      "year_of_release": 2023, "daniel":  true, "picture": ""
+      "year_of_release": 2023, "daniel":  true, "picture": "src/img/f1bcb05d3ece8fe13242fad5bfd1219a6410309d.png"
     },
     { "id": "4", "title": "Fallout 76", "difficulty": 3 , "rating": 3.8, "age_rating": "18",
-      "year_of_release": 2018, "daniel":  true, "picture": ""
+      "year_of_release": 2018, "daniel":  true, "picture": "src/img/e2f92af371166a83a50b6a795341ea7d208e59a2.jpg"
     },
     { "id": "5", "title": "Battlefield™ 1", "difficulty": 4 , "rating": 5, "age_rating": "18",
-      "year_of_release": 2016, "daniel":  true, "picture": ""
+      "year_of_release": 2016, "daniel":  true, "picture": "src/img/bf1.jpg"
     },
     { "id": "6", "title": "Factorio", "difficulty": 5 , "rating": 5, "age_rating": "E",
-      "year_of_release": 2020, "daniel":  false, "picture": ""
+      "year_of_release": 2020, "daniel":  false, "picture": "src/img/factorio.jpg"
     }
   ],
 
