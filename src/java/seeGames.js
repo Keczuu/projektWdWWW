@@ -84,8 +84,8 @@ async function seeGames() {
         });
     });
 }
-
-seeGames();
+//
+// seeGames();
 
 
 

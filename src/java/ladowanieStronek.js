@@ -9,6 +9,11 @@ function loadPage(url) {
             if (body) {
                 document.getElementById('container').innerHTML = body.innerHTML;
                 attachLinkHandlers();
+                if (url.includes('index.html') || url === '') {
+                    if (typeof seeGames === 'function') {
+                        seeGames();
+                    }
+                }
             }
         })
 }
