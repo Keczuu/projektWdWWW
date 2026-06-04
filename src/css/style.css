@@ -563,6 +563,30 @@ body.dostepnosc .buttonDark {
     border-radius: 2px;
 }
 
+.toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #ea638c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+body.dostepnosc .toast {
+    background-color: #FF0071;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
