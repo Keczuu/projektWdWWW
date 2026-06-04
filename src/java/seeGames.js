@@ -1,21 +1,43 @@
+let wszystkieGry = [];
+let zaladowane = 0;
+const ladujMax = 5;
+
 async function loadGames() {
     const response = await fetch('http://localhost:3000/games');
     if (!response.ok) {
         throw new Error(`blad serwera ${response.status}`);
     }
-    const games = await response.json();
-
-    return games;
+    return await response.json();
 }
 
 async function seeGames() {
-    const games = await loadGames();
+    try {
+        wszystkieGry = await loadGames();
+        render();
 
+        const content = document.querySelector('.content');
+
+        content.addEventListener('click', function (event) {
+            if (event.target.classList.contains('review-btn')) {
+                const gameId = event.target.dataset.id;
+                console.log('Kliknięto grę o id:', gameId);
+            }
+        });
+
+    } catch (error) {
+        console.error("Nie mozna zaladowac gier:", error);
+        document.querySelector('.content').innerHTML = '<h3>Blad ladowania gier</h3>';
+    }
+}
+
+function render() {
     const content = document.querySelector('.content');
-
-    content.innerHTML = '';
-
-    games.forEach(game => {
+    if (zaladowane == 0) {
+        content.innerHTML = '';
+    }
+    const czesc = wszystkieGry.slice(zaladowane, zaladowane + ladujMax);
+    let htmlString = '';
+    czesc.forEach(game => {
         let gameDifficulty = game.difficulty || 0;
 
         let maxDifficulty = Math.max(0, Math.min(gameDifficulty, 5));
@@ -32,7 +54,7 @@ async function seeGames() {
 
         let daniel = game.daniel ? '☑' : '☐';
 
-        // obrazek jeszcze trzeba ogarnac
+        // obrazek jeszcze trzeba ogarnac - ogarniete!
         let picture = game.picture || 'src/img/plchld.png';
 
         content.innerHTML += `
@@ -71,22 +93,34 @@ async function seeGames() {
         </div>
         `;
     });
-
-    const buttons = document.querySelectorAll('.review-btn');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-
-            const gameId = this.dataset.id;
-
-            console.log('Kliknięto grę o id:', gameId);
-
-        });
-    });
+    content.insertAdjacentHTML('beforeend', htmlString);
+    zaladowane += czesc.length;
+    przyciskPoWiecej();
 }
+
+function przyciskPoWiecej() {
+    let przycisk = document.getElementById('przyciskWiecej');
+    if (zaladowane < wszystkieGry.length) {
+        if (!przycisk) {
+            const backdrop = document.querySelector('.backdrop');
+            przycisk = document.createElement('button');
+            przycisk.id = 'przyciskWiecej';
+            przycisk.className = 'buttonBright';
+            przycisk.style.marginTop = '30px';
+            przycisk.innerText = 'Zaladuj wiecej gier';
+            przycisk.addEventListener('click', render);
+            backdrop.appendChild(przycisk);
+        }
+    } else {
+        if (przycisk) {
+            przycisk.remove();
+        }
+    }
+}
+
 //
 // seeGames();
-
+// generalnie trzeba bylo to zakomentowac przez to ze gry ladowaly sie szybciej od strony wiec wywolanie tej funkcji jest w ladowanieStronek.js
 
 
 // npx json-server src/db.json
