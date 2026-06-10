@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanielGames</title>
+
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <a href="index.html" class="logo-container" aria-label="Strona główna">
+            <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
+            <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
+        </a>
+    </div>
+
+    <nav class="header-center" aria-label="Nawigacja">
+        <ul class="nav-list">
+            <li><a href="index.html" class="active-link">Biblioteka</a></li>
+            <li><a href="dodajGre.html">Dodaj grę</a></li>
+            <li><a href="oNas.html">O nas</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-right">
+        <span class="username" style="font-size: 1.5em; font-weight: bold;">random</span>
+
+        <div class="avatar">
+            <img src="src/img/avatar.jpg" alt="Avatar użytkownika"/>
+        </div>
+    </div>
+</header>
+
+<div class="layout">
+    <section class="sort-bar" aria-label="Opcje sortowania">
+        <button class="sort-item name-col">Nazwa (↑↓)</button>
+
+        <div class="sort-right">
+            <button class="sort-item">Trudność (↑↓)</button>
+            <button class="sort-item">Ocena (↑↓)</button>
+            <button class="sort-item">PG (↑↓)</button>
+            <button class="sort-item">Daniel ☑</button>
+            <button class="sort-item">Rok wydania (↑↓)</button>
+        </div>
+    </section>
+
+    <main class="content">
+        <h3>Trwa ladowanie gier prosze czekac...</h3>
+        </main>
+</div>
+
+<footer class="footer">
+    <p>DanielGames ©</p>
+    <button class="accessibility" aria-label="Tryb dostępności">K</button>
+</footer>
+
+<script src="src/java/przyciskDostepu.js"></script>
+
+<script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            console.log('przycisk');
+        });
+    });
+</script>
+
+</body>
+</html>
