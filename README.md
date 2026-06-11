@@ -8,11 +8,17 @@ Kompleksowa aplikacja internetowa dedykowana zarządzaniu osobistą kolekcją gi
 ## Funkcje aplikacji
 
 * **Interaktywna biblioteka gier**: Przeglądanie pełnej listy gier w postaci czytelnych kart z okładkami, statystykami i ocenami.
+  
 * **Dynamiczne stronicowanie (Lazy Loading)**: Gry ładowane są paczkami (maksymalnie po 5 sztuk) za pomocą przycisku „Załaduj więcej gier”, co optymalizuje wydajność strony.
+  
 * **Architektura SPA (Single Page Application)**: Płynne przechodzenie między podstronami bez pełnego przeładowywania dokumentu w przeglądarce (za pomocą autorskiego mechanizmu routingu bazującego na Fetch API).
+  
 * **System opinii i recenzji**: Wyświetlanie dynamicznie pobieranych ocen oraz tekstowych opinii przypisanych bezpośrednio do konkretnych ID gier z zabezpieczeniem przed atakami XSS (użycie mechanizmu `escapeHtml`).
+  
 * **Dodawanie nowych gier**: Formularz umożliwiający rozszerzenie bazy danych o nazwę, poziom trudności, ograniczenia wiekowe (PG), rok wydania, flagę obecności „Daniela” oraz podgląd okładki w czasie rzeczywistym przed przesłaniem pliku (`FileReader`).
+  
 * **Tryb Dostępności (wielokontrastowy)**: Specjalny tryb wysokiego kontrastu aktywowany przyciskiem „K” w stopce. Stan trybu zapamiętywany jest w pamięci przeglądarki (`localStorage`). Zawiera zabezpieczenie typu debounce (cooldown na kliknięcie) z komunikatami wizualnymi typu `Toast`.
+  
 * **Responsywne Menu Mobilne**: Pełne wsparcie dla urządzeń mobilnych dzięki rozwijanemu menu hamburgerowemu aktywowanemu przy pomocy kodu JavaScript.
 
 ---
@@ -20,7 +26,9 @@ Kompleksowa aplikacja internetowa dedykowana zarządzaniu osobistą kolekcją gi
 ## Użyte technologie i języki
 
 * **HTML5**: Struktura semantyczna witryny (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer`>).
+  
 * **CSS3**: Kompleksowe stylowanie wizualne oparte na systemach **CSS Grid** i **Flexbox**, niestandardowe czcionki Google Fonts (*Unbounded*, *Creepster*, *Chivo*), animowane przejścia (`transition`), zmienne motywy klas oraz pełna responsywność (`@media query`).
+  
 * **JavaScript (Vanilla JS)**: Logika biznesowa po stronie klienta, asynchroniczne zapytania do bazy danych, dynamiczna manipulacja drzewem DOM, parsowanie kodu za pomocą `DOMParser`, obsługa zdarzeń i przechowywanie stanów.
 
 ---
@@ -58,35 +66,35 @@ DanielGames/
 Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch API` z lokalnym serwerem RESTful API emulującym środowisko backendowe. Struktura bazy danych opiera się na dwóch relacyjnych zasobach:
 
 * **Zasób gier (`games`)**: `GET http://localhost:3000/games` – Pobiera pełną listę obiektów reprezentujących gry. Każdy obiekt zawiera klucze takie jak: `id`, `title` (nazwa), `difficulty` (poziom trudności), `rating` (ocena), `age_rating` (klasyfikacja wiekowa PG), `year_of_release` (rok wydania), `daniel` (flaga obecności w kolekcji) oraz `picture` (ścieżka do okładki).
+  
 * **Zasób opinii (`reviews`)**: `GET http://localhost:3000/reviews` – Pobiera listę recenzji i ocen społeczności. Skrypt filtruje te dane na podstawie właściwości `game_id`, dopasowując je dynamicznie do odpowiedniej karty gry w drzewie DOM.
 
 ---
 
 ## Screeny prezentujące stronę
 
-![Strona główna - biblioteka gier](biblioteka.png)
+![Strona główna - biblioteka gier](src/img/biblioteka.png)
 Strona główna w domyślnym trybie kolorystycznym.
 
-![Strona główna - biblioteka gier - tryb kontrastu](bibliotekakontrast.png)
+![Strona główna - biblioteka gier - tryb kontrastu](src/img/bibliotekakontrast.png)
 Strona główna w trybie kontrastu.
 
-
-![Formularz dodawania gry (pusty)](formularz.png)
+![Formularz dodawania gry (pusty)](src/img/formularz.png)
 Strona dodawania gier (pusty formularz).
 
-![Formularz dodawania gry (pusty) - tryb kontrastu](formularzkontrast.png)
+![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzkontrast.png)
 Strona dodawania gier w trybie kontrastu (pusty formularz).
 
-![Formularz dodawania gry (pusty)](formularzwypelniony.png)
+![Formularz dodawania gry (pusty)](src/img/formularzwypelniony.png)
 Przykład wypełnionego formularza.
 
-![Formularz dodawania gry (pusty) - tryb kontrastu](formularzwypelnionykontrast.png)
+![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzwypelnionykontrast.png)
 Przykład wypełnionego formularza w trybie kontrastu.
 
-![Sekcja "O nas"](onas.png)
+![Sekcja "O nas"](src/img/onas.png)
 Sekcja "O nas".
 
-![Sekcja "O nas"](onas.png)
+![Sekcja "O nas"](src/img/onas.png)
 Sekcja "O nas" w trybie kontrastu.
 
 ---
@@ -120,10 +128,10 @@ npx json-server src/db.json
 Serwer domyślnie uruchomi się pod adresem http://localhost:3000. Nie zamykaj tego okna terminala - serwer musi stale chodzić w tle podczas korzystania z aplikacji.
 
 ### 4. Uruchomienie aplikacji WWW
-- Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść do otwarcia strony:
+Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść do otwarcia strony:
 
-- Przejdź do głównego katalogu projektu.
+* Przejdź do głównego katalogu projektu.
 
-- Otwórz plik index.html bezpośrednio w swojej przeglądarce internetowej (np. poprzez kliknięcie w niego dwukrotnie).
+* Otwórz plik index.html bezpośrednio w swojej przeglądarce internetowej (np. poprzez kliknięcie w niego dwukrotnie).
 
-Aplikacja automatycznie połączy się z serwerem i załaduje pierwsze 5 gier z bazy danych.
+* Aplikacja automatycznie połączy się z serwerem i załaduje pierwsze 5 gier z bazy danych.
