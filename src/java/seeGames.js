@@ -1,86 +1,67 @@
 async function loadGames() {
-    const response = await fetch('http://localhost:3000/games');
-    const games = await response.json();
-
+    const res = await fetch("http://localhost:3000/games");
+    const games = await res.json();
     return games;
 }
 
 async function seeGames() {
+    const content = document.querySelector('.content');
     const games = await loadGames();
 
-    const content = document.querySelector('.content');
-
-    content.innerHTML = '';
-
     games.forEach(game => {
+        const card = document.createElement("div");
+        card.classList.add("game-card");
 
-        let stars = '★'.repeat(game.difficulty);
+        const title = document.createElement("h3");
+        title.classList.add("game-title");
+        title.textContent = game.title;
 
-        let rating = game.rating ?? '-';
+        const gameContent = document.createElement("div");
+        gameContent.classList.add("game-content");
 
-        let daniel = game.daniel ? '☑' : '☐';
+        const img = document.createElement("img");
+        img.classList.add("game-cover");
+        img.src = game.picture || "src/img/plchld.png";
+        img.alt = game.title;
 
-        // obrazek jeszcze trzeba ogarnac
-        let picture = game.picture;
+        const stats = document.createElement("div");
+        stats.classList.add("game-stats");
 
-        content.innerHTML += `
-        <div class="game-card">
-            <h3 class="game-title">${game.title}</h3>
+        const stars = document.createElement("div");
+        stars.classList.add("stat-item", "stars");
+        stars.textContent = "★".repeat(game.difficulty);
 
-            <div class="game-content">
+        const rating = document.createElement("div");
+        rating.classList.add("stat-item", "circle", "rating-pink");
+        rating.textContent = game.rating ?? "-";
 
-                <img src="${picture}" alt="${game.title}" class="game-cover" />
+        const pg = document.createElement("div");
+        pg.classList.add("stat-item", "circle", "pg-orange");
+        pg.textContent = game.age_rating;
 
-                <div class="game-stats">
-                    <div class="stat-item stars">${stars}</div>
+        const daniel = document.createElement("div");
+        daniel.classList.add("stat-item", "checkbox");
+        daniel.textContent = game.daniel ? "☑" : "☐";
 
-                    <div class="stat-item circle rating-pink">
-                        ${rating}
-                    </div>
+        const year = document.createElement("div");
+        year.classList.add("stat-item", "year");
+        year.textContent = game.year_of_release;
 
-                    <div class="stat-item circle pg-orange">
-                        ${game.age_rating}
-                    </div>
+        const button = document.createElement("button");
+        button.classList.add("review-btn");
+        button.textContent = "Dodaj opinię";
+        button.dataset.id = game.id;
 
-                    <div class="stat-item checkbox">
-                        ${daniel}
-                    </div>
-
-                    <div class="stat-item year">
-                        ${game.year_of_release}
-                    </div>
-                </div>
-
-            </div>
-
-            <button class="review-btn" data-id="${game.id}">
-                Dodaj opinię
-            </button>
-        </div>
-        `;
-    });
-
-    const buttons = document.querySelectorAll('.review-btn');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-
-            const gameId = this.dataset.id;
-
-            console.log('Kliknięto grę o id:', gameId);
-
+        button.addEventListener("click", () => {
+            console.log("ID gry:", game.id);
         });
+
+        stats.append(stars, rating, pg, daniel, year);
+        gameContent.append(img, stats);
+        card.append(title, gameContent, button);
+
+        content.appendChild(card);
     });
 }
 
 seeGames();
-
-
-
-// npx json-server src/db.json
-
-// const fajnie = await fetch('http://localhost:3000/games/1')
-// const text = await fajnie.text()
-
-
-
