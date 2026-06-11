@@ -27,7 +27,7 @@ Kompleksowa aplikacja internetowa dedykowana zarządzaniu osobistą kolekcją gi
 
 ## Budowa projektu i struktura katalogów
 
-Aplikacja posiada przejrzysłym, modularny podział zasobów na pliki strukturalne oraz zasoby wewnętrzne w folderze `src`.
+Aplikacja posiada przejrzysty, modularny podział zasobów na pliki strukturalne oraz zasoby wewnętrzne w folderze `src`.
 
 ```text
 DanielGames/
@@ -64,9 +64,30 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 
 ## Screeny prezentujące stronę
 
-![Strona główna - biblioteka gier]()
-![Formularz dodawania gry]()
-![Sekcja "O Nas"]()
+![Strona główna - biblioteka gier](biblioteka.png)
+Strona główna w domyślnym trybie kolorystycznym.
+
+![Strona główna - biblioteka gier - tryb kontrastu](bibliotekakontrast.png)
+Strona główna w trybie kontrastu.
+
+
+![Formularz dodawania gry (pusty)](formularz.png)
+Strona dodawania gier (pusty formularz).
+
+![Formularz dodawania gry (pusty) - tryb kontrastu](formularzkontrast.png)
+Strona dodawania gier w trybie kontrastu (pusty formularz).
+
+![Formularz dodawania gry (pusty)](formularzwypelniony.png)
+Przykład wypełnionego formularza.
+
+![Formularz dodawania gry (pusty) - tryb kontrastu](formularzwypelnionykontrast.png)
+Przykład wypełnionego formularza w trybie kontrastu.
+
+![Sekcja "O nas"](onas.png)
+Sekcja "O nas".
+
+![Sekcja "O nas"](onas.png)
+Sekcja "O nas" w trybie kontrastu.
 
 ---
 
