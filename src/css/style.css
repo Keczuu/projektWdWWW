@@ -362,6 +362,17 @@ body.dostepnosc .buttonDark {
     gap: 15px;
 }
 
+.add-game-form > * {
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.add-game-form input:not([type="checkbox"]) {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 .div1 {
      background-color: #000000;
      border-radius: 12px;
@@ -596,13 +607,20 @@ body.dostepnosc .toast {
     .header-center {
         padding-left: 0;
         text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .header-right {
+        justify-content: center;
     }
 
     .backdrop {
+        box-sizing: border-box;
         margin: 0 auto;
         max-width: 1400px;
-        width: 90%;
-        padding: 20px 20px 50px;
+        width: calc(100% - 24px);
+        padding: 16px 12px 64px;
         min-height: calc(100vh - 200px);
         font-size: 1em;
     }
@@ -685,14 +703,76 @@ body.dostepnosc .toast {
     .buttonBright, .buttonDark {
         padding: 10px;
         font-size: 1em;
+        width: 100%;
     }
 
+    .add-game-form {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 10px;
+    }
+
+    .add-game-form > * {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 58px;
+    }
+
+    .add-game-form .div1 { order: 1; }
+    .add-game-form .div5 { order: 2; }
+    .add-game-form .div2 { order: 3; }
+    .add-game-form .div6 { order: 4; }
+    .add-game-form .div7 { order: 5; }
+    .add-game-form .div8 { order: 6; }
+    .add-game-form .div9 { order: 7; }
+    .add-game-form .div10 { order: 8; }
+    .add-game-form .div11 { order: 9; }
+    .add-game-form .div12 { order: 10; }
+    .add-game-form .div13 { order: 11; }
+    .add-game-form .div14 { order: 12; }
+    .add-game-form .div15 { order: 13; }
+    .add-game-form .div16 { order: 14; }
+
     .div1, .div2, .div9 {
-        padding: 20px;
+        padding: 14px;
     }
 
     .div5, .div6, .div7, .div8, .div10, .div11, .div12, .div13, .div14 {
-        padding: 30px;
+        padding: 16px;
+    }
+
+    .add-game-form input:not([type="checkbox"]) {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .add-game-form label,
+    .add-game-form .styled-form {
+        width: 100%;
+    }
+
+    .add-game-form .div5 input,
+    .add-game-form .div6 input,
+    .add-game-form .div10 input,
+    .add-game-form .div14 input {
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        text-align: center;
+    }
+
+    .add-game-form input[type="file"] {
+        overflow: hidden;
+    }
+
+    .add-game-form input[type="checkbox"] {
+        width: 34px;
+        height: 34px;
+        accent-color: #ea638c;
     }
 
 }
