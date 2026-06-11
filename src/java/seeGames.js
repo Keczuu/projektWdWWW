@@ -1,10 +1,19 @@
 let wszystkieGry = [];
+let wszystkieOpinie = [];
 let zaladowane = 0;
 const ladujMax = 5;
 let aktywneLadowanie = 0;
 
 async function loadGames() {
     const response = await fetch('http://localhost:3000/games');
+    if (!response.ok) {
+        throw new Error(`blad serwera ${response.status}`);
+    }
+    return await response.json();
+}
+
+async function loadReviews() {
+    const response = await fetch('http://localhost:3000/reviews');
     if (!response.ok) {
         throw new Error(`blad serwera ${response.status}`);
     }
@@ -27,21 +36,31 @@ async function seeGames() {
 
     zaladowane = 0;
     wszystkieGry = [];
+    wszystkieOpinie = [];
 
     try {
         const gry = await loadGames();
+        let opinie = [];
+
+        try {
+            opinie = await loadReviews();
+        } catch (error) {
+            console.error("Nie mozna zaladowac opinii:", error);
+        }
 
         if (idLadowania !== aktywneLadowanie || !document.body.contains(content)) {
             return;
         }
 
         wszystkieGry = gry;
+        wszystkieOpinie = opinie;
         render(content);
 
         if (!content.dataset.reviewListenerAttached) {
             content.addEventListener('click', function (event) {
-                if (event.target.classList.contains('review-btn')) {
-                    const gameId = event.target.dataset.id;
+                const reviewButton = event.target.closest('.review-btn');
+                if (reviewButton) {
+                    const gameId = reviewButton.dataset.id;
                     console.log('Kliknięto grę o id:', gameId);
                 }
             });
@@ -56,6 +75,74 @@ async function seeGames() {
     }
 }
 
+function getReviewsForGame(gameId) {
+    return wszystkieOpinie.filter(review => String(review.game_id) === String(gameId));
+}
+
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, function (char) {
+        return {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        }[char];
+    });
+}
+
+function reviewStars(rating) {
+    const numberRating = Number(rating);
+    if (!Number.isFinite(numberRating)) {
+        return '☆☆☆☆☆';
+    }
+
+    const roundedRating = Math.max(0, Math.min(Math.round(numberRating), 5));
+    return '★'.repeat(roundedRating) + '☆'.repeat(5 - roundedRating);
+}
+
+function formatReviewRating(rating) {
+    const numberRating = Number(rating);
+    if (!Number.isFinite(numberRating)) {
+        return '-/5';
+    }
+
+    const limitedRating = Math.max(0, Math.min(numberRating, 5));
+    return `${limitedRating}/5`;
+}
+
+function renderReviews(gameId) {
+    const reviews = getReviewsForGame(gameId);
+
+    if (reviews.length === 0) {
+        return `
+            <div class="game-reviews">
+                <h4 class="game-reviews-title">Opinie</h4>
+                <p class="review-empty">Brak opinii.</p>
+            </div>
+        `;
+    }
+
+    const reviewsHtml = reviews.map(review => `
+        <div class="review-item">
+            <div class="review-rating">
+                <span>${reviewStars(review.rating)}</span>
+                <span>${formatReviewRating(review.rating)}</span>
+            </div>
+            <p class="review-text">${escapeHtml(review.text || 'Brak treści opinii.')}</p>
+        </div>
+    `).join('');
+
+    return `
+        <div class="game-reviews">
+            <h4 class="game-reviews-title">Opinie</h4>
+            <div class="review-list">
+                ${reviewsHtml}
+            </div>
+        </div>
+    `;
+}
+
 function render(content = document.querySelector('.content')) {
     if (!content) {
         return;
@@ -68,6 +155,7 @@ function render(content = document.querySelector('.content')) {
     let htmlString = '';
     czesc.forEach(game => {
         let gameDifficulty = game.difficulty || 0;
+        let title = escapeHtml(game.title || 'Bez nazwy');
 
         let maxDifficulty = Math.max(0, Math.min(gameDifficulty, 5));
         let stars;
@@ -86,24 +174,25 @@ function render(content = document.querySelector('.content')) {
 
         // obrazek jeszcze trzeba ogarnac - ogarniete!
         let picture = game.picture || 'src/img/plchld.png';
+        let safePicture = escapeHtml(picture);
 
         htmlString += `
         <div class="game-card">
-            <h3 class="game-title">${game.title}</h3>
+            <h3 class="game-title">${title}</h3>
 
             <div class="game-content">
 
-                <img src="${picture}" alt="${game.title}" class="game-cover" />
+                <img src="${safePicture}" alt="${title}" class="game-cover" />
 
                 <div class="game-stats">
                     <div class="stat-item stars">${stars}</div>
 
                     <div class="stat-item circle rating-pink">
-                        ${rating}
+                        ${escapeHtml(rating)}
                     </div>
 
                     <div class="stat-item circle pg-orange">
-                        ${game.age_rating}
+                        ${escapeHtml(game.age_rating)}
                     </div>
 
                     <div class="stat-item checkbox">
@@ -111,15 +200,19 @@ function render(content = document.querySelector('.content')) {
                     </div>
 
                     <div class="stat-item year">
-                        ${game.year_of_release}
+                        ${escapeHtml(game.year_of_release)}
                     </div>
                 </div>
 
             </div>
 
-            <button class="review-btn" data-id="${game.id}">
-                Dodaj opinię
-            </button>
+            <div class="game-actions">
+                <button class="review-btn" data-id="${escapeHtml(game.id)}">
+                    Dodaj opinię
+                </button>
+            </div>
+
+            ${renderReviews(game.id)}
         </div>
         `;
     });

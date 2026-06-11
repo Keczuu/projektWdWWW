@@ -102,6 +102,15 @@ body.dostepnosc .review-btn:hover {
     background-color: #FF004D;
 }
 
+body.dostepnosc .game-reviews-title,
+body.dostepnosc .review-rating {
+    color: #FF0071;
+}
+
+body.dostepnosc .review-item {
+    border-top-color: rgba(255, 0, 113, 0.65);
+}
+
 body.dostepnosc .accessibility {
     background-color: #FF0071;
 }
@@ -272,7 +281,7 @@ body.dostepnosc .buttonDark {
 .game-card {
     background-color: #000000;
     border-radius: 12px;
-    padding: 26px 53px 70px 53px;
+    padding: 26px 53px;
     margin-bottom: 7px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -336,10 +345,16 @@ body.dostepnosc .buttonDark {
     font-size: 42px;
 }
 
+.game-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
 .review-btn {
-    position: absolute;
-    bottom: 26px;
-    right: 53px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-color: #89023E;
     color: white;
     border: none;
@@ -353,6 +368,48 @@ body.dostepnosc .buttonDark {
 
 .review-btn:hover {
     background-color: #ea638c;
+}
+
+.game-reviews {
+    margin-top: 18px;
+    text-align: left;
+}
+
+.game-reviews-title {
+    color: #ea638c;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.review-list {
+    display: grid;
+    gap: 10px;
+}
+
+.review-item {
+    border-top: 1px solid rgba(234, 99, 140, 0.55);
+    padding-top: 12px;
+}
+
+.review-rating {
+    color: #ea638c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.review-text,
+.review-empty {
+    font-family: "Chivo", sans-serif;
+    font-size: 18px;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.review-empty {
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .parent {
@@ -651,7 +708,7 @@ body.dostepnosc .toast {
     }
 
     .game-card {
-        padding: 15px 30px 40px 30px;
+        padding: 15px 30px 24px 30px;
         margin-bottom: 4px;
     }
 
@@ -685,10 +742,30 @@ body.dostepnosc .toast {
     }
 
     .review-btn {
-        bottom: 15px;
-        right: 30px;
         padding: 6px 16px;
         font-size: 12px;
+        width: 100%;
+    }
+
+    .game-actions {
+        margin-top: 16px;
+    }
+
+    .game-reviews {
+        margin-top: 14px;
+    }
+
+    .game-reviews-title {
+        font-size: 15px;
+    }
+
+    .review-rating {
+        font-size: 13px;
+    }
+
+    .review-text,
+    .review-empty {
+        font-size: 15px;
     }
 
     .styled-form {
