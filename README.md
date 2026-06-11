@@ -73,29 +73,45 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 
 ## Screeny prezentujące stronę
 
-![Strona główna - biblioteka gier](src/img/biblioteka.png)
-Strona główna w domyślnym trybie kolorystycznym.
+--
+$$\text{![Strona główna - biblioteka gier](src/img/biblioteka.png)}$$
+> Powyżej: `Strona główna w domyślnym trybie kolorystycznym.`
+--
 
-![Strona główna - biblioteka gier - tryb kontrastu](src/img/bibliotekakontrast.png)
-Strona główna w trybie kontrastu.
+--
+$$\text{![Strona główna - biblioteka gier - tryb kontrastu](src/img/bibliotekakontrast.png)}$$
+> Powyżej: `Strona główna w trybie kontrastu.`
+--
 
-![Formularz dodawania gry (pusty)](src/img/formularz.png)
-Strona dodawania gier (pusty formularz).
+--
+$$\text{![Formularz dodawania gry (pusty)](src/img/formularz.png)}$$
+> Powyżej: `Strona dodawania gier (pusty formularz).`
+--
 
-![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzkontrast.png)
-Strona dodawania gier w trybie kontrastu (pusty formularz).
+--
+$$\text{![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzkontrast.png)}$$
+> Powyżej: `Strona dodawania gier w trybie kontrastu (pusty formularz).`
+--
 
-![Formularz dodawania gry (pusty)](src/img/formularzwypelniony.png)
-Przykład wypełnionego formularza.
+--
+$$\text{![Formularz dodawania gry (pusty)](src/img/formularzwypelniony.png)}$$
+> Powyżej: `Przykład wypełnionego formularza.`
+--
 
-![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzwypelnionykontrast.png)
-Przykład wypełnionego formularza w trybie kontrastu.
+--
+$$\text{![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzwypelnionykontrast.png)}$$
+> Powyżej: `Przykład wypełnionego formularza w trybie kontrastu.`
+--
 
-![Sekcja "O nas"](src/img/onas.png)
-Sekcja "O nas".
+--
+$$\text![Sekcja "O nas"](src/img/onas.png)}$$
+> Powyżej: `Sekcja "O nas".`
+--
 
-![Sekcja "O nas"](src/img/onas.png)
-Sekcja "O nas" w trybie kontrastu.
+--
+$$\text{![Sekcja "O nas"](src/img/onas.png)}$$
+> Powyżej: `Sekcja "O nas" w trybie kontrastu.`
+--
 
 ---
 
