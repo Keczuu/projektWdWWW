@@ -14,7 +14,7 @@ function toast(wiadomosc) {
     document.body.appendChild(toast);
     setTimeout(() => {
         toast.classList.add('show');
-    }, 0); // najpierw strona go generuje a po tych 10ms pokazuje bo inaczej nie dziala animacja
+    }, 10); // najpierw strona go generuje a po tych 10ms pokazuje bo inaczej nie dziala animacja
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => toast.remove(), 300);
