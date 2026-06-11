@@ -64,7 +64,9 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 
 ## Screeny prezentujące stronę
 
-<wstawic tu!!!>
+![Strona główna - biblioteka gier]()
+![Formularz dodawania gry]()
+![Sekcja "O Nas"]()
 
 ---
 
@@ -97,10 +99,10 @@ npx json-server src/db.json
 Serwer domyślnie uruchomi się pod adresem http://localhost:3000. Nie zamykaj tego okna terminala - serwer musi stale chodzić w tle podczas korzystania z aplikacji.
 
 ### 4. Uruchomienie aplikacji WWW
-Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść do otwarcia strony:
+- Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść do otwarcia strony:
 
-Przejdź do głównego katalogu projektu.
+- Przejdź do głównego katalogu projektu.
 
-Otwórz plik index.html bezpośrednio w swojej przeglądarce internetowej (np. poprzez kliknięcie w niego dwukrotnie).
+- Otwórz plik index.html bezpośrednio w swojej przeglądarce internetowej (np. poprzez kliknięcie w niego dwukrotnie).
 
 Aplikacja automatycznie połączy się z serwerem i załaduje pierwsze 5 gier z bazy danych.
