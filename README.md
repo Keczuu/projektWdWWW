@@ -78,35 +78,49 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
   <figcaption><i>Strona główna w domyślnym trybie kolorystycznym.</i></figcaption>
 </figure>
 
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
+
 <figure align="center">
   <img src="src/img/bibliotekakontrast.png" alt="Strona główna - biblioteka gier - tryb kontrastu" width="600"/>
   <figcaption><i>Strona główna w trybie kontrastu.</i></figcaption>
 </figure>
+
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
 
 <figure align="center">
   <img src="src/img/formularz.png" alt="Formularz dodawania gry (pusty)" width="600"/>
   <figcaption><i>Strona dodawania gier (pusty formularz).</i></figcaption>
 </figure>
 
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
+
 <figure align="center">
   <img src="src/img/formularzkontrast.png" alt="Formularz dodawania gry (pusty) - tryb kontrastu" width="600"/>
   <figcaption><i>Strona dodawania gier w trybie kontrastu (pusty formularz).</i></figcaption>
 </figure>
+
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
 
 <figure align="center">
   <img src="src/img/formularzwypelniony.png" alt="Formularz dodawania gry (wypełniony)" width="600"/>
   <figcaption><i>Przykład wypełnionego formularza.</i></figcaption>
 </figure>
 
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
+
 <figure align="center">
   <img src="src/img/formularzwypelnionykontrast.png" alt="Formularz dodawania gry (wypełniony) - tryb kontrastu" width="600"/>
   <figcaption><i>Przykład wypełnionego formularza w trybie kontrastu.</i></figcaption>
 </figure>
 
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
+
 <figure align="center">
   <img src="src/img/onas.png" alt="Sekcja O nas" width="600"/>
   <figcaption><i>Sekcja "O nas".</i></figcaption>
 </figure>
+
+<hr style="border: 0; height: 1px; background: rgba(128, 128, 128, 0.2); margin: 30px 0;">
 
 <figure align="center">
   <img src="src/img/onaskontrast.png" alt="Sekcja O nas - tryb kontrastu" width="600"/>
