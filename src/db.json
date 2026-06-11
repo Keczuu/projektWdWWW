@@ -1,17 +1,86 @@
 {
-  "$schema": "./node_modules/json-server/schema.json",
-
   "games": [
-    { "id": "1", "title": "Stardew Valley", "difficulty": 1 , "rating": null, "age_rating": "3",
-      "year_of_release": 2016, "daniel":  false, "picture": ""
+    {
+      "id": "1",
+      "title": "Amnesia: The Dark Descent",
+      "difficulty": 4,
+      "rating": null,
+      "age_rating": "18",
+      "year_of_release": 2010,
+      "daniel": true,
+      "picture": ""
     },
-    { "id": "2", "title": "Stardew Valley2", "difficulty": 5 , "rating": null, "age_rating": "18",
-      "year_of_release": 2050, "daniel":  true, "picture": ""
+    {
+      "id": "2",
+      "title": "The Witcher 3: Wild Hunt",
+      "difficulty": 4,
+      "rating": null,
+      "age_rating": "18",
+      "year_of_release": 2015,
+      "daniel": false,
+      "picture": ""
+    },
+    {
+      "id": "3",
+      "title": "Minecraft",
+      "difficulty": 2,
+      "rating": null,
+      "age_rating": "7",
+      "year_of_release": 2011,
+      "daniel": false,
+      "picture": ""
+    },
+    {
+      "id": "4",
+      "title": "Cyberpunk 2077",
+      "difficulty": 4,
+      "rating": null,
+      "age_rating": "18",
+      "year_of_release": 2020,
+      "daniel": false,
+      "picture": ""
+    },
+    {
+      "id": "5",
+      "title": "Red Dead Redemption 2",
+      "difficulty": 3,
+      "rating": null,
+      "age_rating": "18",
+      "year_of_release": 2018,
+      "daniel": false,
+      "picture": ""
+    },
+    {
+      "id": "6",
+      "title": "Honkai: Star Rail",
+      "difficulty": 5,
+      "rating": null,
+      "age_rating": "12",
+      "year_of_release": 2023,
+      "daniel": true,
+      "picture": ""
     }
   ],
-
   "reviews": [
-    { "id": "1", "game_id": "1", "rating": 5 , "text": "a review of the game_id=1"},
-    { "id": "2", "game_id": "1", "rating": 1 , "text": "another review of the game_id=1"}
-  ]
+    { "id": "1", "game_id": "1", "rating": 1, "text": "Nie jestem fanem daniela." },
+    { "id": "2", "game_id": "1", "rating": 4, "text": "Atmosfera jest niesamowicie gęsta." },
+    { "id": "3", "game_id": "1", "rating": 5, "text": "Daniel i jego historia robią robotę." },
+
+    { "id": "4", "game_id": "2", "rating": 5, "text": "Jedna z najlepszych gier RPG w historii." },
+    { "id": "5", "game_id": "2", "rating": 4, "text": "Ogromny świat i świetne questy." },
+    { "id": "6", "game_id": "2", "rating": 5, "text": "Geralt to legenda." },
+
+    { "id": "7", "game_id": "3", "rating": 5, "text": "Nieskończona kreatywność." },
+    { "id": "8", "game_id": "3", "rating": 4, "text": "Prosta, ale genialna mechanika." },
+    { "id": "9", "game_id": "3", "rating": 5, "text": "Można grać bez końca." },
+
+    { "id": "10", "game_id": "4", "rating": 4, "text": "Po patchach gra działa dużo lepiej." },
+    { "id": "11", "game_id": "4", "rating": 1, "text": "Słabe." },
+    { "id": "12", "game_id": "4", "rating": 4, "text": "Fabularnie bardzo mocna." },
+
+    { "id": "13", "game_id": "5", "rating": 5, "text": "Najbardziej realistyczny open world." },
+    { "id": "14", "game_id": "5", "rating": 4, "text": "Historia Arthura jest wzruszająca." },
+    { "id": "15", "game_id": "5", "rating": 3, "text": "Wolne tempo, ale klimatyczne." }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
