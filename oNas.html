@@ -12,12 +12,15 @@
 <body>
 
 <header class="header">
+
     <div class="header-left">
         <a href="index.html" class="logo-container" aria-label="Strona główna">
             <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
             <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
         </a>
     </div>
+
+    <button class="hamburger" aria-label="Otwórz menu">≡</button>
 
     <nav class="header-center" aria-label="Nawigacja">
         <ul class="nav-list">
@@ -27,15 +30,20 @@
         </ul>
     </nav>
 
-    <div class="header-right">
-        <span class="username" style="font-size: 1.5em; font-weight: bold;">random</span>
+    <nav class="mobile-menu" aria-label="Menu mobilne">
+        <a href="index.html">Biblioteka</a>
+        <a href="dodajGre.html">Dodaj grę</a>
+        <a href="oNas.html" class="active-link">O nas</a>
+    </nav>
 
+    <div class="header-right">
+        <span class="username">random</span>
         <div class="avatar">
             <img src="src/img/avatar.jpg" alt="Avatar użytkownika"/>
         </div>
     </div>
-</header>
 
+</header>
 
 <div class="layout">
 
@@ -86,6 +94,16 @@
 </footer>
 
 <script src="src/java/przyciskDostepu.js"></script>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open");
+});
+</script>
 
 </body>
 </html>

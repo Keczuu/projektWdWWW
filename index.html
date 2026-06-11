@@ -7,17 +7,22 @@
 
     <link rel="stylesheet" href="src/css/style.css"/>
     <link rel="icon" href="src/img/logo.png"/>
+    <script src="src/java/seeGames.js" defer></script>
+    <script src="src/java/przyciskDostepu.js" defer></script>
 </head>
 
 <body>
 
 <header class="header">
+
     <div class="header-left">
         <a href="index.html" class="logo-container" aria-label="Strona główna">
             <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
             <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
         </a>
     </div>
+
+    <button class="hamburger" aria-label="Otwórz menu">≡</button>
 
     <nav class="header-center" aria-label="Nawigacja">
         <ul class="nav-list">
@@ -27,17 +32,24 @@
         </ul>
     </nav>
 
-    <div class="header-right">
-        <span class="username" style="font-size: 1.5em; font-weight: bold;">random</span>
+    <nav class="mobile-menu" aria-label="Menu mobilne">
+        <a href="index.html" class="active-link">Biblioteka</a>
+        <a href="dodajGre.html">Dodaj grę</a>
+        <a href="oNas.html">O nas</a>
+    </nav>
 
+    <div class="header-right">
+        <span class="username">random</span>
         <div class="avatar">
             <img src="src/img/avatar.jpg" alt="Avatar użytkownika"/>
         </div>
     </div>
+
 </header>
 
 <div class="layout">
-    <section class="sort-bar" aria-label="Opcje sortowania">
+
+    <section class="sort-bar">
         <button class="sort-item name-col">Nazwa (↑↓)</button>
 
         <div class="sort-right">
@@ -49,9 +61,9 @@
         </div>
     </section>
 
-    <main class="content">
-        <h3>Trwa ladowanie gier prosze czekac...</h3>
-        </main>
+    <div class="games-content">
+    </div>
+
 </div>
 
 <footer class="footer">
@@ -59,15 +71,14 @@
     <button class="accessibility" aria-label="Tryb dostępności">K</button>
 </footer>
 
-<script src="src/java/przyciskDostepu.js"></script>
-
 <script>
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            console.log('przycisk');
-        });
-    });
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open");
+});
 </script>
 
 </body>
