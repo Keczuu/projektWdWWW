@@ -73,45 +73,45 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 
 ## Screeny prezentujące stronę
 
---
-$$\text{![Strona główna - biblioteka gier](src/img/biblioteka.png)}$$
-> Powyżej: `Strona główna w domyślnym trybie kolorystycznym.`
---
+<figure align="center">
+  <img src="src/img/biblioteka.png" alt="Strona główna - biblioteka gier" width="600"/>
+  <figcaption><i>Strona główna w domyślnym trybie kolorystycznym.</i></figcaption>
+</figure>
 
---
-$$\text{![Strona główna - biblioteka gier - tryb kontrastu](src/img/bibliotekakontrast.png)}$$
-> Powyżej: `Strona główna w trybie kontrastu.`
---
+<figure align="center">
+  <img src="src/img/bibliotekakontrast.png" alt="Strona główna - biblioteka gier - tryb kontrastu" width="600"/>
+  <figcaption><i>Strona główna w trybie kontrastu.</i></figcaption>
+</figure>
 
---
-$$\text{![Formularz dodawania gry (pusty)](src/img/formularz.png)}$$
-> Powyżej: `Strona dodawania gier (pusty formularz).`
---
+<figure align="center">
+  <img src="src/img/formularz.png" alt="Formularz dodawania gry (pusty)" width="600"/>
+  <figcaption><i>Strona dodawania gier (pusty formularz).</i></figcaption>
+</figure>
 
---
-$$\text{![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzkontrast.png)}$$
-> Powyżej: `Strona dodawania gier w trybie kontrastu (pusty formularz).`
---
+<figure align="center">
+  <img src="src/img/formularzkontrast.png" alt="Formularz dodawania gry (pusty) - tryb kontrastu" width="600"/>
+  <figcaption><i>Strona dodawania gier w trybie kontrastu (pusty formularz).</i></figcaption>
+</figure>
 
---
-$$\text{![Formularz dodawania gry (pusty)](src/img/formularzwypelniony.png)}$$
-> Powyżej: `Przykład wypełnionego formularza.`
---
+<figure align="center">
+  <img src="src/img/formularzwypelniony.png" alt="Formularz dodawania gry (wypełniony)" width="600"/>
+  <figcaption><i>Przykład wypełnionego formularza.</i></figcaption>
+</figure>
 
---
-$$\text{![Formularz dodawania gry (pusty) - tryb kontrastu](src/img/formularzwypelnionykontrast.png)}$$
-> Powyżej: `Przykład wypełnionego formularza w trybie kontrastu.`
---
+<figure align="center">
+  <img src="src/img/formularzwypelnionykontrast.png" alt="Formularz dodawania gry (wypełniony) - tryb kontrastu" width="600"/>
+  <figcaption><i>Przykład wypełnionego formularza w trybie kontrastu.</i></figcaption>
+</figure>
 
---
-$$\text![Sekcja "O nas"](src/img/onas.png)}$$
-> Powyżej: `Sekcja "O nas".`
---
+<figure align="center">
+  <img src="src/img/onas.png" alt="Sekcja O nas" width="600"/>
+  <figcaption><i>Sekcja "O nas".</i></figcaption>
+</figure>
 
---
-$$\text{![Sekcja "O nas"](src/img/onas.png)}$$
-> Powyżej: `Sekcja "O nas" w trybie kontrastu.`
---
+<figure align="center">
+  <img src="src/img/onaskontrast.png" alt="Sekcja O nas - tryb kontrastu" width="600"/>
+  <figcaption><i>Sekcja "O nas" w trybie kontrastu.</i></figcaption>
+</figure>
 
 ---
 
