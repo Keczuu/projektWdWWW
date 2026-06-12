@@ -246,7 +246,7 @@ W razie wystąpienia problemów, jak na przykładowym screenshocie:
 <figure align="center">
   <img src="src/img/blad.png" alt="Błąd w terminalu po próbie uruchomienia komendy npx json-server src/db.json" width="600"/>
 </figure>
-Należy:
+#### Należy:
 * Uruchomić `Windows Powershell` jako **administrator**.
 
 * Użyć komendy:
