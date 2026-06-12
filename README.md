@@ -243,9 +243,7 @@ npx json-server src/db.json
 Serwer domyślnie uruchomi się pod adresem http://localhost:3000. Nie zamykaj tego okna terminala - serwer musi stale chodzić w tle podczas korzystania z aplikacji.
 
 W razie wystąpienia problemów, jak na przykładowym screenshocie:
-<figure align="center">
-  <img src="src/img/blad.png" alt="Błąd w terminalu po próbie uruchomienia komendy npx json-server src/db.json" width="600"/>
-</figure>
+<img src="src/img/blad.png" alt="Błąd w terminalu po próbie uruchomienia komendy npx json-server src/db.json" width="600"></img>
 #### Należy:
 * Uruchomić `Windows Powershell` jako **administrator**.
 
