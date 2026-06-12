@@ -176,6 +176,54 @@ Aplikacja do poprawnego działania bazy danych wymaga środowiska uruchomieniowe
 node -v
 npm -v
 ```
+Jeśli obie komendy zwracają numery wersji - masz wszystko zainstalowane. Przejdź do punktu 2.
+
+Jeśli nie masz potrzebnego środowiska uruchomieniowego oraz menedżera pakietów postępuj z następującą instrukcją:
+#### 1.1 Pobierz instalator Node.js
+Oficjalny instalator zapewnia Node.js oraz npm w jednym pakiecie.
+* [Wejdź na stronę Node.js](https://nodejs.org)
+  
+* Pobierz wersję LTS (Long Term Support) - stabilną i zalecaną.
+  
+* Zapisz plik `.msi` na komputerze.
+
+#### 1.2 Zainstaluj Node.js
+Instalator automatycznie doda Node i npm do systemu.
+* Uruchom pobrany plik `.msi`.
+  
+* Klikaj Next aż do końca.
+
+* Zostaw domyślne ustawienia.
+
+* Zaznacz opcję `Automatically install necessary tools` jeśli się pojawi.
+
+* Kliknij `Install` i poczekaj na zakończenie.
+
+#### 1.3 Zweryfikuj instalację
+Po instalacji sprawdź, czy system widzi Node i npm.
+Ponownie wpisz w  terminalu:
+```bash
+node -v
+npm -v
+```
+Jeśli widzisz numery wersji - instalacja przebiegła poprawnie.
+
+#### 1.4 Zainstaluj pakiety projektu
+Teraz możesz pobrać zależności aplikacji.
+* Przejdź do głównego folderu projektu w terminalu.
+
+* Wpisz:
+  ```bash
+  cd ścieżka/do/projektu.
+  ```
+
+* Uruchom instalację pakietów:
+  ```bash
+  npm install
+  ```
+
+* Poczekaj, aż **npm** pobierze wszystkie zależności.
+**Jeśli wszystko poszło poprawnie, przejdź do punktu 2.**
 
 ### 2. Pobranie projektu
 Pobierz archiwum .zip z kodem źródłowym i rozpakuj je lub sklonuj repozytorium na swój dysk za pomocą Gita, a następnie przejdź do głównego folderu projektu w terminalu:
