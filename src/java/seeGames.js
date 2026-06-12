@@ -4,6 +4,18 @@ let zaladowane = 0;
 const ladujMax = 5;
 let aktywneLadowanie = 0;
 
+function getAverageRating(gameId) {
+    const reviews = getReviewsForGame(gameId);
+
+    if (reviews.length === 0) {
+        return "-";
+    }
+
+    const sum = reviews.reduce((acc, review) => acc + Number(review.rating), 0);
+
+    return (sum / reviews.length).toFixed(1);
+}
+
 async function loadGames() {
     const response = await fetch('http://localhost:3000/games');
     if (!response.ok) {
@@ -168,7 +180,7 @@ function render(content = document.querySelector('.games-content')) {
             stars = filledStars + emptyStars;
         }
 
-        let rating = game.rating ?? '-';
+        let rating = getAverageRating(game.id);
 
         let daniel = game.daniel ? '☑' : '☐';
 
