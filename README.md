@@ -1,5 +1,5 @@
 # DanielGames - Biblioteka Gier
-#### [Link do projektu w Figmie](https://www.figma.com/design/s25HFnlO3ttlsvkOEacDt7/DanielGames?node-id=0-1&t=higOMiso8P6Gybuj-1)
+#### [Link do projektu w Figmie](https://www.figma.com/design/s25HFnlO3ttlsvkOEacDt7/DanielGames?node-id=0-1&t=higOMiso8P6Gybuj-1) (ostateczny wygląd różni się od projektu, ale struktura oraz kolorystyka są generalnie zachowane)
 
 Kompleksowa aplikacja internetowa dedykowana zarządzaniu osobistą kolekcją gier wideo, ocenianiu tytułów oraz przeglądaniu opinii społeczności. Projekt łączy nowoczesny, responsywny interfejs z dynamicznym systemem ładowania treści Single Page Application (SPA) oraz lokalną bazą danych.
 
