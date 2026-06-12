@@ -88,14 +88,14 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
 
 <figure align="center">
-  <img src="src/img/bibliotekatel.png" alt="Strona główna - biblioteka gier - widok na telefonie" width="600"/>
+  <img src="src/img/bibliotekatel.png" alt="Strona główna - biblioteka gier - widok na telefonie" width="300"/>
   <figcaption><i>Strona główna na telefonie.</i></figcaption>
 </figure>
 
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
 
 <figure align="center">
-  <img src="src/img/menutel.png" alt="Menu burger na telefonie" width="600"/>
+  <img src="src/img/menutel.png" alt="Menu burger na telefonie" width="300"/>
   <figcaption><i>Menu burger na telefonie.</i></figcaption>
 </figure>
 
@@ -130,15 +130,15 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
 
 <figure align="center">
-  <img src="src/img/formularztel.png" alt="Formularz dodawania gry na telefonie (pusty)" width="600"/>
+  <img src="src/img/formularztel.png" alt="Formularz dodawania gry na telefonie (pusty)" width="300"/>
   <figcaption><i>Strona dodawania gier na telefonie (pusty).</i></figcaption>
 </figure>
 
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
 
 <figure align="center">
-  <img src="src/img/formularztelwypelniony.png" alt="Formularz dodawania gry na telefonie" width="600"/>
-  <figcaption><i>Strona dodawania gier na telefonie.</i></figcaption>
+  <img src="src/img/formularztelwypelniony.png" alt="Formularz dodawania gry na telefonie" width="300"/>
+  <figcaption><i>Przykład wypełnionego formularza na telefonie.</i></figcaption>
 </figure>
 
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
@@ -158,7 +158,7 @@ Projekt komunikuje się asynchronicznie za pomocą wbudowanego mechanizmu `Fetch
 <hr style="border: 0; height: 1px; background-color: #282d33; margin: 30px 0;">
 
 <figure align="center">
-  <img src="src/img/onastel.png" alt="Sekcja O nas na telefonie" width="600"/>
+  <img src="src/img/onastel.png" alt="Sekcja O nas na telefonie" width="300"/>
   <figcaption><i>Sekcja "O nas" na telefonie.</i></figcaption>
 </figure>
 
