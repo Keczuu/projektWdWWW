@@ -242,6 +242,23 @@ npx json-server src/db.json
 ```
 Serwer domyślnie uruchomi się pod adresem http://localhost:3000. Nie zamykaj tego okna terminala - serwer musi stale chodzić w tle podczas korzystania z aplikacji.
 
+W razie wystąpienia problemów, jak na przykładowym screenshot'cie:
+<figure align="center">
+  <img src="src/img/blad.png" alt="Błąd w terminalu po próbie uruchomienia komendy npx json-server src/db.json" width="600"/>
+</figure>
+Należy:
+* Uruchomić `Windows Powershell` jako **administrator**.
+
+* Użyć komendy:
+  ```bash
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+
+Teraz należy otworzyć **nowy terminal** w głównym katalogu projektu i wpisać:
+```bash
+npx json-server src/db.json
+```
+
 ### 4. Uruchomienie aplikacji WWW
 Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść do otwarcia strony:
 
