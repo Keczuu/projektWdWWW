@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanielGames</title>
+
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="icon" href="src/img/logo.png"/>
+    <script src="src/java/seeGames.js" defer></script>
+    <script src="src/java/przyciskDostepu.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="header-left">
+        <a href="index.html" class="logo-container" aria-label="Strona główna">
+            <img src="src/img/logo.png" alt="Logo DanielGames" class="logo-normal"/>
+            <img src="src/img/logo1.png" alt="" class="logo-on-hover"/>
+        </a>
+    </div>
+
+    <button class="hamburger" aria-label="Otwórz menu">≡</button>
+
+    <nav class="header-center" aria-label="Nawigacja">
+        <ul class="nav-list">
+            <li><a href="index.html" class="active-link">Biblioteka</a></li>
+            <li><a href="dodajGre.html">Dodaj grę</a></li>
+            <li><a href="oNas.html">O nas</a></li>
+        </ul>
+    </nav>
+
+    <nav class="mobile-menu" aria-label="Menu mobilne">
+        <a href="index.html" class="active-link">Biblioteka</a>
+        <a href="dodajGre.html">Dodaj grę</a>
+        <a href="oNas.html">O nas</a>
+    </nav>
+
+    <div class="header-right">
+        <span class="username">random</span>
+        <div class="avatar">
+            <img src="src/img/avatar.jpg" alt="Avatar użytkownika"/>
+        </div>
+    </div>
+
+</header>
+
+<div class="layout">
+
+    <section class="sort-bar">
+        <button class="sort-item name-col">Nazwa (↑↓)</button>
+
+        <div class="sort-right">
+            <button class="sort-item">Trudność (↑↓)</button>
+            <button class="sort-item">Ocena (↑↓)</button>
+            <button class="sort-item">PG (↑↓)</button>
+            <button class="sort-item">Daniel ☑</button>
+            <button class="sort-item">Rok wydania (↑↓)</button>
+        </div>
+    </section>
+
+    <div class="games-content">
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>DanielGames ©</p>
+    <button class="accessibility accessibility-turning-button" aria-label="Tryb dostępności">K</button>
+</footer>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>
