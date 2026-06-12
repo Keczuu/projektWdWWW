@@ -265,3 +265,8 @@ Gdy baza danych została poprawnie odpalona i działa w tle, możesz przejść d
 * Otwórz plik index.html bezpośrednio w swojej przeglądarce internetowej (np. poprzez kliknięcie w niego dwukrotnie).
 
 * Aplikacja automatycznie połączy się z serwerem i załaduje pierwsze 5 gier z bazy danych.
+
+### 5. Zespół:
+* Jan Hapunik
+* Filip Baszuk
+* Milena Milewska
